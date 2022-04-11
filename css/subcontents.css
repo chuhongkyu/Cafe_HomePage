@@ -1,0 +1,13 @@
+.explain_contents{
+    width: 100%;
+    background-color: #ffe9d8;
+}
+
+.cafe_content_1{
+    display: flex;
+}
+
+.cafe_content_text{
+    display: flex;
+    flex-direction: column;
+}

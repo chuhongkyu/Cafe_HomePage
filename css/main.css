@@ -5,7 +5,6 @@
 .hashtag_box{
     width: 100%;
     padding: 10px 20px;
-    margin-top: 5px;
 }
 
 .hastag_line_1{
@@ -31,7 +30,7 @@
     grid-template-columns: repeat(4, minmax(300px, 1fr)) auto;
     grid-template-rows: 1fr auto;
     background-color: white;
-    padding: 20px 30px;
+    padding: 50px 100px;
     gap: 15px;
 }
 

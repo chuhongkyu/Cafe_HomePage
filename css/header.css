@@ -12,8 +12,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: var(--bg-color);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding: 0px 100px;
 }
 
 .log_box{
@@ -27,46 +28,84 @@ header {
 .log_box h1{
     margin-left: 20px;
     font-size: 20px;
+    color: var(--root-color);
 }
 
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
-    /* Also define standard property for compatibility */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 nav a{
     text-decoration: none;
     margin: 15px;
     padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--root-color);
 }
 
 .slider_Container {
     width: 100%;
-    height: 650px;
+    height: 800px;
     position: relative;
     overflow: hidden;
+    background-color: var(--root-color);
 }
 
 .slide_Box{
     width: 100%;
-    height: 650px;
-    background-color: black;
-    overflow: hidden;
+    height: 800px;
 }
 
 .slide_Box img{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: 0;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 150px;
 }
 
+.slide_text_box{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: end;
+    width: 700px;
+}
+
+.slide_text_box h1{
+    width: 100%;
+    height: 300px;
+    font-size: 205px;
+    color: var(--bg-color);
+    font-weight: 800;
+    margin-top: -100px;
+}
+
+.slide_text_box h5 {
+    font-size: 15px;
+    color: white;
+}
+
+.slide_coffee{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide_coffee img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    
 
 .prev,
 .next {
@@ -111,7 +150,7 @@ nav a{
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: rgb(250, 174, 174);
+    background-color: var(--bg-color);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -119,7 +158,7 @@ nav a{
 
 .active,
 .dot:hover {
-    background-color: #ff8484;
+    background-color: white;
 }
 
 .fade {
@@ -127,12 +166,56 @@ nav a{
     animation-duration: 1.5s;
 }
 
+.circle_text{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    z-index: 1;
+}
+
+svg {
+    height: 200px;
+}
+
+svg text{
+    font-size: 26px;
+    font-family: Helvetica Neue,
+    sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    fill: rgb(61, 61, 61);
+}
+
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.4
     }
 
     to {
         opacity: 1
     }
 }
+
+@keyframes coffe-flow {
+    0%{
+        background-position: right bottom;
+    }
+    
+    50% {
+        background-position: top;
+    }
+
+    100%{
+        background-position: right bottom;
+    }
+}
+
+/* background: linear-gradient(-130deg, rgb(128, 106, 47) 50%, var(--root-color) 50%);
+background-size: 100% 400%;
+animation: coffe-flow 10s 2s ease-in-out infinite;
+transition: 1s; */

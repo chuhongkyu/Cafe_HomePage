@@ -1,10 +1,11 @@
 .main_container{
     width: 100%;
+    background-color: var(--bg-color);
 }
 
 .hashtag_box{
     width: 100%;
-    padding: 10px 20px;
+    padding: 50px 20px;
 }
 
 .hastag_line_1{
@@ -15,13 +16,24 @@
 
 .hastag_line_1 span{
     padding: 6px 15px;
-    color: black;
+    color: var(--block-color);
     font-weight: 600;
-    background-color: #FDC1B3;
     border-radius: 25px;
     margin: 3px;
     white-space: nowrap;
     overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    background: linear-gradient(to right, var(--root-color) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+}
+
+.hastag_line_1 span:hover{
+    transform: translateY(-2px);
+    transition: 0.5s;
+    color: var(--root-color);
+    background-position:right bottom;
 }
 
 .gird_article_container{
@@ -29,8 +41,7 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(300px, 1fr)) auto;
     grid-template-rows: 1fr auto;
-    background-color: white;
-    padding: 50px 100px;
+    padding: 20px 100px;
     gap: 15px;
 }
 
@@ -52,8 +63,25 @@
 }
 
 .article_contents img{
-    width: 300px;
+    width: 100%;
     height: 320px;
+}
+
+.articl_blank{
+    grid-column: span 1;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--root-color);
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.articl_blank img{
+    width: 280px;
+    height: 340px;
 }
 
 .article_contents h5{

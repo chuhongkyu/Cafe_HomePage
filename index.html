@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인스타감성 충만 카페</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +17,7 @@
     <!-- 화이팅-->
 
     <div class="opening">
-        <div class="coffee"><i class="fa-solid fa-mug-hot fa-4x"></i></div>
+        <div class="coffee"><img style="width: 300px; height: 400px;" src="img/coffe_01.png" alt=""></div>
     </div>
 
     <!-- this is opening -->
@@ -21,38 +25,63 @@
     <header>
         <div class="log_container">
             <div class="log_box">
-                <img src="img/MaopGo.svg" alt="#" style="width: 120px; height: 40px;">X
-                <img src="img/icons8-instagram-48.png" alt=""><h1>감성 충만 카페 10선</h1>
-            </div>
-            
+                <img src="img/MaopGo.svg" alt="#" style="width: 120px; height: 40px;"><h1>시원한카페</h1>
+            </div>     
             <nav>
-                <a href=""><i class="fa-solid fa-house fa-2x"></i></a>
-                <a href="">#</a>
-                <a href="">footer</a>
+                <a href="">HOME</a>
+                <a href="">HASHTAG</a>
+                <a href="">CONACT</a>
             </nav>
         </div>
-
         <!-- 여기까지가 로고 컨테이너다. -->
+
+        <div class="circle_text">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle_top">
+                        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle_bottom">
+                        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250"
+                            to="555 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <text dy="70" textLength="1220">
+        
+                    <textPath xlink:href="#textcircle_top">Coffe is Good</textPath>
+                    <textPath xlink:href="#textcircle_bottom">We are MapoGo</textPath>
+                </text>
+            </svg>
+        </div>
+
+        <!-- cirlce_text -->
+
 
         <div class="slider_Container">
             <div class="slide_Box fade">
-                <div class="slide_Number">1 / 3</div>
-                <img src="img/카페_루프_01.jpg" alt="">  
+                <div class="slide_text_box">
+                    <h1>MAPO</h1>
+                    <h1>COOL</h1>
+                    <h5>마포구 시원한 카페</h5>
+                </div>
+                <img src="img/시원한커피.png" alt="">
             </div>
         
-            <div class="slide_Box">
-                <div class="slide_Number fade">2 / 3</div>
-                <img src="img/카페_루프_02.jpg" alt="">
+            <div class="slide_Box fade">
+                <div class="slide_coffee">
+                    <img src="img/coffee_02.png" alt="">
+                </div>
             </div>
         
-            <div class="slide_Box">
-                <div class="slide_Number fade">3 / 3</div>
-                <img src="img/카페_루프_01.jpg" alt="">
+            <div class="slide_Box fade">
+                <div class="slide_text_box"></div>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
-            <br>
 
             <div class="dot_box" style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
@@ -67,6 +96,7 @@
     <!-- 내 header는 logo_cotainer와 slider_Container로 이루어졌다. -->
 
     <section class="main_container">
+
         <div class="hashtag_box">
             <div class="hastag_line_1">
                 <span>#인스타감성충만</span>
@@ -91,6 +121,7 @@
         </div>
 
         <div class="gird_article_container">
+
             <div class="article_contents">
                 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800" alt="">
                 <h5>디펑크</h5>
@@ -98,9 +129,9 @@
             </div>
 
             <div class="article_contents">
-                <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
+                <img src="img/카페_루프_01.jpg"
                     alt="">
-                <h5>디펑크</h5>
+                <h5>카페 루프탑</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident. Cumque
                     itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
                     eaque.</p>
@@ -154,6 +185,14 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident. Cumque
                     itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
                     eaque.</p>
+            </div>
+
+            <div class="articl_blank">
+                <img src="img/coffe_01.png" alt="blank">     
+            </div>
+
+            <div class="articl_blank">
+                <img src="img/coffe_01.png" alt="blank">
             </div>
 
         </div>
@@ -182,7 +221,7 @@
     <section class="explain_contents">
         <div class="cafe_content_1">
             <div class="cafe_content_text">
-                <h1>디펑크</h1>
+                <h1>카페루프탑</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident.
                     Cumque
                     itaque
@@ -190,8 +229,7 @@
                     eaque.
                 </p>
             </div>
-            <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
-                alt="">
+            <img src="img/카페_루프_01.jpg"alt="">
         </div>
     
     </section>

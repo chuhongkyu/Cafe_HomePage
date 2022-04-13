@@ -1,7 +1,8 @@
 .explain_contents{
     width: 100%;
     height: 100%;
-    background-color: var(--root-color);
+    background-color: var(--bg-color);
+    border: 30px solid var(--root-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,4 +25,19 @@
 .cafe_content_text{
     display: flex;
     flex-direction: column;
+}
+
+.phone,
+.map_mark,
+.homepage,
+.best_menu{
+    display: flex;
+    align-items: center;
+}
+
+.phone i,
+.map_mark i,
+.homepage i,
+.best_menu i{
+    margin-right: 5px;
 }

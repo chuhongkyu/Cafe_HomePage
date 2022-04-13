@@ -178,17 +178,17 @@ nav a{
 }
 
 svg {
-    height: 200px;
+    height: 220px;
 }
 
 svg text{
-    font-size: 26px;
+    font-size: 50px;
     font-family: Helvetica Neue,
     sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 10px;
-    fill: rgb(61, 61, 61);
+    letter-spacing: 12px;
+    fill: var(--bg-color);
 }
 
 @keyframes fade {

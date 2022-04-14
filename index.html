@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd2759b5a2cc444cb8bc2518b5c2b40b"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- 4월 07일 인스타 감성 충만 카페 제작 시작-->
@@ -228,19 +229,64 @@
     <!-- 요거는 기사 컨테이너의 콘텐츠로 누르면 가지는 실제 콘텐츠이다.(카페소개) -->
 
     <section class="explain_contents">
-        <div class="cafe_content_1">
-            <div class="cafe_content_text">
-                <h1>카페루프탑</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident.
-                    Cumque
-                    itaque
-                    vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
-                    eaque.
-                </p>
-            </div>
-            <img src="img/카페_루프_01.jpg"alt="">
-        </div>
-    
+
+        <table class="table_container">
+                    <tr style="width: 100%;">
+                        <th style="width: 40%;" rowspan="9"><img src="img/Debunk/DEBUNK_01.jpg" alt=""></th>
+                        <th style="width: 10%;">&emsp;&emsp;&emsp;</th>
+                        <th  style="width: 50%;"  colspan="3"><h1>디벙크</h1><p style="color:rgb(78, 78, 78);">카페,디저트</p></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="width: 50px;"><i class="fa-solid fa-phone"></i></td>
+                        <td>02-6930-5598</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><i class="fa-solid fa-location-dot"></i></td>
+                        <td><p>서울 마포구 성지1길 30</p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><i class="fa-solid fa-house"></i></td>
+                        <td><a href="http://debunk.kr" target="blank">http://debunk.kr</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><i class="fa-solid fa-utensils"></i></td>
+                        <td>아인슈패너(우유크림/커스터드)</td>
+                        <td>흑임자갸또</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>바닐라라떼</td>
+                        <td>아인슈패너라떼</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>베리베리티</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><img style="width: 200px; height: 200px;" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMThfMjc3%2FMDAxNjQyNDg1MzM1NjI4.rnlnCdzhNVoYUmW8qSBbakTyWmXEV3wSCs1r3kgW1Y8g.5oXRorhTxBXwbMJ6cEVucA4xuLC0_5VnX5qVK3mq1aQg.JPEG.codns5857%2FIMG_3329.jpg&type=sc960_832" alt=""></td>
+                        <td><img style="width: 200px; height: 200px;"
+                            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMThfMjc3%2FMDAxNjQyNDg1MzM1NjI4.rnlnCdzhNVoYUmW8qSBbakTyWmXEV3wSCs1r3kgW1Y8g.5oXRorhTxBXwbMJ6cEVucA4xuLC0_5VnX5qVK3mq1aQg.JPEG.codns5857%2FIMG_3329.jpg&type=sc960_832"
+                            alt=""></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><div id="map_container" style="width:300px;height:250px;"></div></td>
+                    </tr>
+                    
+        </table>
     </section>
 
     <footer id="footer">
@@ -251,6 +297,7 @@
 
     <!-- 이것은 Footer 다 -->
 
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
 </body>
-<script src="js/index.js"></script>
 </html>

@@ -41,3 +41,15 @@
 .best_menu i{
     margin-right: 5px;
 }
+
+.table_container{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: 1px solid black;
+}
+
+th, tr, td{
+    border: 1px solid black;
+}

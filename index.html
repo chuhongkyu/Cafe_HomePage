@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인스타감성 충만 카페</title>
+    <title>마포구 시원한 카페</title>
+    <link rel="icon" href="img/favicon/MaopGocolor.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400&display=swap"
@@ -52,7 +53,6 @@
                     </path>
                 </defs>
                 <text dy="70" textLength="1220">
-        
                     <textPath xlink:href="#textcircle_top">Coffe is Good</textPath>
                     <textPath xlink:href="#textcircle_bottom">We are MapoGo</textPath>
                 </text>
@@ -67,7 +67,8 @@
                 <div class="slide_text_box">
                     <h1>MAPO</h1>
                     <h1>COOL</h1>
-                    <h5>마포구 시원한 카페</h5>
+                    <h5 id="nice_letter"></h5>
+                    <h5>마포구</h5>
                 </div>
                 <img src="img/시원한커피.png" alt="">
             </div>
@@ -275,29 +276,47 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td><img style="width: 200px; height: 200px;" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMThfMjc3%2FMDAxNjQyNDg1MzM1NjI4.rnlnCdzhNVoYUmW8qSBbakTyWmXEV3wSCs1r3kgW1Y8g.5oXRorhTxBXwbMJ6cEVucA4xuLC0_5VnX5qVK3mq1aQg.JPEG.codns5857%2FIMG_3329.jpg&type=sc960_832" alt=""></td>
-                        <td><img style="width: 200px; height: 200px;"
+                        <td><img style="width: 380px; height: 320px; border-radius: 5px;" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMThfMjc3%2FMDAxNjQyNDg1MzM1NjI4.rnlnCdzhNVoYUmW8qSBbakTyWmXEV3wSCs1r3kgW1Y8g.5oXRorhTxBXwbMJ6cEVucA4xuLC0_5VnX5qVK3mq1aQg.JPEG.codns5857%2FIMG_3329.jpg&type=sc960_832" alt=""></td>
+                        <td><img style="width: 380px; height: 320px; border-radius: 5px;"
                             src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMThfMjc3%2FMDAxNjQyNDg1MzM1NjI4.rnlnCdzhNVoYUmW8qSBbakTyWmXEV3wSCs1r3kgW1Y8g.5oXRorhTxBXwbMJ6cEVucA4xuLC0_5VnX5qVK3mq1aQg.JPEG.codns5857%2FIMG_3329.jpg&type=sc960_832"
                             alt=""></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
-                        <td><div id="map_container" style="width:300px;height:250px;"></div></td>
+                        <td><div id="map_container" style="width:380px;height:220px;"></div></td>
                     </tr>
                     
         </table>
     </section>
 
     <footer id="footer">
-        <h1>How to follow me</h1>
-        <div class="footer">
+        <div class="sns_box">
+            <img style="width:90px; height:90px;" src="img/footerSns/icons8-facebook.svg" alt="">
+            <img src="img/footerSns/icons8-인스-타-그램 (2).svg" alt="">
+            <img src="img/footerSns/icons8-지저귀다.svg" alt="">
         </div>
+        <div class="footer_box">
+            <div class="footer_logo_box">
+                <img style="width: 150px; height: 50px;" src="img/MaopGo.svg" alt="">
+                <h5 style="text-align: end;">마포구</h5>
+            </div>
+            <div class="footer_logo_box">
+                <h4>개인정보처리방침 | CCTV처리방침 | 저작권정책 | 지원방침</h4>
+                <p>03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
+                야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9</p>
+            </div>
+            <div class="footer_mark">
+                <img src="img/coffee_icon.png" alt="#">
+            </div>
+        </div>
+
     </footer>
 
     <!-- 이것은 Footer 다 -->
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/letter.js"></script>
 </body>
 </html>

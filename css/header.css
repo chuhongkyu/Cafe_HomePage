@@ -201,17 +201,35 @@ svg text{
     }
 }
 
-@keyframes coffe-flow {
-    0%{
-        background-position: right bottom;
-    }
-    
-    50% {
-        background-position: top;
+.slide_Cup img:first-child {
+    z-index: 5;
+}
+
+.slide_Cup img:nth-child(2) {
+    z-index: 4;
+}
+
+.slide_Cup img:nth-child(3) {
+    z-index: 3;
+}
+
+.slide_Cup img:nth-child(4) {
+    z-index: 4;
+}
+
+.ice {
+    /* transition: 0.5s;
+    animation: coffee-ice 1s 1s ease-in-out infinite;
+    z-index: 5; */
+}
+
+@keyframes coffee-ice {
+    from {
+        transform: scale(1);
     }
 
-    100%{
-        background-position: right bottom;
+    to {
+        transform: scale(1.5);
     }
 }
 

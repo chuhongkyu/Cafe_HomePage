@@ -105,6 +105,35 @@ nav a{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.slide_Cup {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide_Cup img {
+    width: 600px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.slide_Cup span {
+    background-color: var(--bg-color);
+    width: 130px;
+    height: 220px;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    border-radius: 28%;
+    transform: translate(-47%, -25%);
+}
     
 
 .prev,

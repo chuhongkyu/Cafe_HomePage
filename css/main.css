@@ -1,6 +1,7 @@
 .main_container{
     width: 100%;
     background-color: var(--bg-color);
+    overflow: hidden;
 }
 
 .hashtag_box{

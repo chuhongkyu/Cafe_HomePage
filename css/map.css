@@ -16,7 +16,7 @@
 
 .map_wrap {
     position: relative;
-    width: 40%;
+    width: 800px;
     height: 60%;
 }
 
@@ -88,7 +88,7 @@
 }
 
 #placesList .info .gray {
-    color: var(--root-color);
+    color: var(--text-color2);
 }
 
 #placesList .info .jibun {
@@ -97,7 +97,7 @@
 }
 
 #placesList .info .tel {
-    color: var(--root-color);
+    color: var(--text-color2);
 }
 
 #placesList .item .markerbg {
@@ -197,6 +197,13 @@
     padding: 5px;
     border-radius: 5px;
     background-color: var(--root-color);
-    color: white;
+    color: black;
     border: none;
+    cursor: pointer;
+}
+
+.option button:hover{
+    color: white;
+    background-color: var(--block-color);
+    transition: 0.5s;
 }

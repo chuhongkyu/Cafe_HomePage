@@ -11,12 +11,19 @@
 .explain_contents_blue{
     width: 100%;
     height: 100%;
-    background: var(--root-color);
+    /* background: var(--root-color); */
+    background: url(../img/main_bg04.png) fixed;
+    background-position: bottom center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+}
+
+.explain_contents_blue h1{
+    font-size: 55px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .cafe_content_1{

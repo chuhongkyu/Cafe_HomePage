@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd2759b5a2cc444cb8bc2518b5c2b40b"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd2759b5a2cc444cb8bc2518b5c2b40b"></script> -->
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd2759b5a2cc444cb8bc2518b5c2b40b&libraries=services,clusterer,drawing"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -138,7 +140,7 @@
                 <h5>디펑크</h5>
                 <p>문화와 예술의 공간, 따뜻한 휴식의 공간, 좋은 사람들이 만나 멋진 이야기와 생각을 나누는공간, The Space, 디벙크 입니다.
                 단순한 카페 그 이상을 지향하는 '공간' 디벙크는, 때로는 음악가들의 무대, 때로는 예술가들의 전시회, 그리고 가을밤 작은 소극장의 스크린이 되어 드릴 것 입니다.</p>
-                <div class="safe_icon"></div>
+                 <span class="safe_icon"></span>
             </div>
 
             <div class="article_contents">
@@ -159,14 +161,7 @@
                     itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
                     eaque.</p>
             </div>
-            <div class="article_contents">
-                <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
-                    alt="">
-                <h5>디펑크</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident. Cumque
-                    itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
-                    eaque.</p>
-            </div>
+
             <div class="article_contents">
                 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
                     alt="">
@@ -184,6 +179,16 @@
                     itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
                     eaque.</p>
             </div>
+
+            <div class="article_contents">
+                <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
+                    alt="">
+                <h5>디펑크</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis! Ducimus, incidunt provident. Cumque
+                    itaque vitae iste, dignissimos sunt pariatur accusamus veritatis id suscipit fuga cum maxime nulla cupiditate
+                    eaque.</p>
+            </div>
+            
             <div class="article_contents">
                 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
                     alt="">
@@ -215,35 +220,41 @@
 
     <!-- main_container는 해시테그 박스와 그리형식 기사 컨테이너로 만들었다. -->
 
-    <section class="explain_contents">
-        <div class="cafe_content_1">
-            <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA1MDJfNTUg/MDAxNTg4NDA0MDI4NjIx.l6_2-ZgnzmPCneN1H4I5Y6eovkHLFPnP40wDkaEkTOUg.gNy-s7mYVuOueKyYBzIL1RpaqPISPa_nPTvvx5PgFTQg.JPEG.94qkralfl/1588404027376.jpg?type=w800"
-                alt="">
-            <div class="cafe_content_text">
-                <h1>디벙크</h1>
-                <div class="phone"><i class="fa-solid fa-phone"></i><p>02-6930-5598</p></div>
-                <div class="map_mark"><i class="fa-solid fa-location-dot"></i><p>서울 마포구 성지1길 30</p></div>
-                <div class="homepage"><i class="fa-solid fa-house"></i><a href="http://debunk.kr" target="blank">http://debunk.kr</a></div>
-                <div class="best_menu"><i class="fa-solid fa-utensils"></i>
-                    <div class="best_menu_text">
-                        <p>아인슈패너</p>
-                        <p>바닐라라떼</p>
-                        <p>아인슈패너</p>
-                        <p>베리베리티</p>
+    <section class="explain_contents_blue">
+        <h1>지도</h1>
+        <div class="map_wrap">
+            <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+        
+            <div id="menu_wrap" class="bg_white">
+                <div class="option">
+                    <div>
+                        <form onsubmit="searchPlaces(); return false;">
+                            <select name="cafe" id="cafe_selecter">
+                                <option value="마포구 카페" selected>마포구 카페</option>
+                                <option value="합정 디벙크">디벙크</option>
+                                <option value="카페모아 마포중앙도서관점">카페 모아</option>
+                                <option value="합정 밤부 베이커리&브루잉">밤부 베이커리&브루잉</option>
+                                <option value="합정 포비 베이직">포비 베이직</option>
+                                <option value="스타벅스 망원한강공원점">스타벅스 망원한강공원점</option>
+                            </select>
+                            <!-- <input type="text" value="" id="keyword" size="15"> -->
+                            <button type="submit">선택하기</button>
+                        </form>
                     </div>
                 </div>
+                <hr>
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
             </div>
-
-            <div id="map_container" style="width:380px;height:220px;"></div>
         </div>
+    </section>
+
+    <section class="explain_contents">
+        
         
     </section>
 
     <!-- 요거는 기사 컨테이너의 콘텐츠로 누르면 가지는 실제 콘텐츠이다.(카페소개) -->
-
-    <section class="explain_contents">
-
-    </section>
 
     <footer id="footer">
         <div class="sns_box">

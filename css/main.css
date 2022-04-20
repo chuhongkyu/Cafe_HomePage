@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(300px, 1fr)) auto;
     grid-template-rows: 1fr auto;
-    padding: 20px 100px;
+    padding: 10px 140px 50px 140px;
     gap: 15px;
 }
 
@@ -112,12 +112,12 @@
 }
 
 .safe_icon{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    background-color: #3d717d;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
     z-index: 2;
+    background-image: url(../img/coffee_medal.png);
+    position: absolute;
+    background-size: cover;
+    top: -40px;
+    left: -40px;
 }

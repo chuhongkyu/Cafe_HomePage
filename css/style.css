@@ -4,6 +4,7 @@
 @import url(subcontents.css);
 @import url(opening.css);
 @import url(root.css);
+@import url(map.css);
 
 *{
     box-sizing: border-box;

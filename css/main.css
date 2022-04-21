@@ -40,9 +40,8 @@
 .gird_article_container{
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(300px, 1fr);
-    grid-template-rows: 1fr auto;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
     padding: 10px 140px 50px 140px;
     gap: 15px;
 }
@@ -75,6 +74,8 @@
     height: 30%;
     padding: 10px;
     position: relative;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .safe_icon{
@@ -98,6 +99,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    white-space: nowrap;
 }
 
 .article_box h5{
@@ -106,10 +108,10 @@
     margin-bottom: 15px;
 }
 
-
-
 .go_homePage{
     border: 2px solid var(--text-color);
     border-radius: 25px;
     padding: 5px 15px 5px 15px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }

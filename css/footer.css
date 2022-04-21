@@ -6,6 +6,8 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .sns_box{
@@ -31,6 +33,21 @@ footer{
 }
 
 .footer_logo_box h5{
-    color: var(--bg-color);
+    color: var(--text-color2);
 }
 
+
+@media screen and (max-width: 768px) {
+    .footer_mark {
+        display: none;
+    }
+    .footer_box {
+        flex-direction: column;
+    }
+
+    .footer_logo_box h4,
+    .footer_logo_box p {
+        font-size: 10px;
+        color: var(--text-color);
+    }
+}

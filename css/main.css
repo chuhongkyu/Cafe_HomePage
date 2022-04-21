@@ -115,3 +115,13 @@
     word-break: keep-all;
     overflow-wrap: break-word;
 }
+
+@media screen and (max-width: 768px) {
+    .gird_article_container{
+        padding: 10px 20px 50px 20px;
+    }
+    .event{
+        display: none;
+    }
+}
+

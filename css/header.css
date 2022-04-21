@@ -149,7 +149,6 @@ nav a{
     transform: translate(-47%, -25%);
 }
     
-
 .prev,
 .next {
     cursor: pointer;
@@ -280,3 +279,34 @@ svg text{
 background-size: 100% 400%;
 animation: coffe-flow 10s 2s ease-in-out infinite;
 transition: 1s; */
+
+@media screen and (max-width: 768px) {
+    .log_container {
+        padding: 5px;
+    }
+    nav {
+        display: none;
+    }
+    svg{
+        display: none;
+    }
+    .log_box h1 {
+        font-size: 20px;
+    }
+    .slide_text_box{
+        top: 60%;
+        left: 20%;
+    }
+    .slide_text_box h1{
+        font-size: 150px;
+        height: 250px;
+    }
+    .log_container{
+        padding: 5px;
+    }
+    .letter_box {
+        color: var(--text-color2);
+        border: 2px solid var(--text-color2);
+    }
+}
+

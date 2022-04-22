@@ -28,6 +28,9 @@
     background: linear-gradient(100deg,  var(--block-color) 50%, var(--root-color) 50%);
     background-size: 220% 100%;
     background-position:right bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hastag_line_1 span:hover{
@@ -43,7 +46,7 @@
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
     padding: 10px 140px 50px 140px;
-    gap: 15px;
+    gap: 50px;
 }
 
 .article_contents{
@@ -52,10 +55,13 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .article_contents:hover{
@@ -66,8 +72,27 @@
 .article_img{
     width: 100%;
     height: 70%;
-    background-color: var(--block-color);
 }
+
+.article_contents:nth-child(1){
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/Debunk/DEBUNK_04.jpg);
+}
+.article_contents:nth-child(2) {
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe_more.jpg);
+}
+.article_contents:nth-child(3) {
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/fourbasic/포비베이직.jpg);
+}
+.article_contents:nth-child(4) {
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/beanBrother/빈브라더스_20140807_09.jpg);
+}
+.article_contents:nth-child(5) {
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafeendA/커피앤드에이.jpg);
+}
+.article_contents:nth-child(6) {
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/bamboo/바부.jpg);
+}
+
 
 .article_box {
     width: 100%;
@@ -76,6 +101,7 @@
     position: relative;
     word-break: keep-all;
     overflow-wrap: break-word;
+    background-color: white;
 }
 
 .safe_icon{
@@ -96,8 +122,9 @@
 
 .article_box_btn{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     width: 100%;
     white-space: nowrap;
 }
@@ -114,6 +141,9 @@
     padding: 5px 15px 5px 15px;
     word-break: keep-all;
     overflow-wrap: break-word;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
 }
 
 @media screen and (max-width: 768px) {

@@ -99,13 +99,13 @@
     color: var(--text-color2);
 }
 
-#placesList .item .markerbg {
+#placesList .item .markerBg {
     float: left;
     position: absolute;
     width: 36px;
     height: 37px;
     margin: 10px 0 0 10px;
-    background: url(../img//coffee_mark.png) no-repeat;
+    background: url(../img/coffee_mark.png) no-repeat;
 }
 
 #placesList .item .marker_1 {

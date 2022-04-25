@@ -71,7 +71,7 @@
 
 .article_img{
     width: 100%;
-    height: 70%;
+    height: 60%;
 }
 
 .article_contents:nth-child(1){
@@ -96,8 +96,8 @@
 
 .article_box {
     width: 100%;
-    height: 30%;
-    padding: 10px;
+    height: 40%;
+    padding: 20px;
     position: relative;
     word-break: keep-all;
     overflow-wrap: break-word;

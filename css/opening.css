@@ -8,21 +8,31 @@
     animation: opening 1s 1s ease-in-out forwards;
     transition: 1s;
     color: var(--root-color);
-    background-color: var(--bg-color);
+    background-color: var(--root-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .coffee{
+    width: 300px;
+    height: 300px;
+    background-color: var(--block-color);
+    overflow: hidden;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 2px 30px rgba(black, .2);
+    border-radius: 50%;
+}
+
+.coffee img{
+    width: 150px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 90%;
-    background-color: var(--root-color);
 }
 
 
@@ -40,4 +50,37 @@
     
 }
 
+.wave {
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    background: var(--bean-color);
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+}
 
+.wave.-three {
+    animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    background: var(--block-color);
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}

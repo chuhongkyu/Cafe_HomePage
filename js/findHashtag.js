@@ -9,7 +9,7 @@ function findHashtag(hash){
            hashtagList[i].style.display = 'none';
            console.log("해당 제외요소"); 
        }
-       
     }
+
 }
 

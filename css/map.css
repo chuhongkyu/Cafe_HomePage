@@ -33,7 +33,7 @@
     margin: 0px; */
     padding: 10px;
     overflow-y: auto;
-    width: 60%;
+    width: 30vw;
     height: 100%;
     background: var(--bg-color);
     z-index: 1;
@@ -185,6 +185,7 @@
 }
 
 #cafe_selecter{
+    width: 80%;
     padding: 5px;
     border-radius: 5px;
     background-color: var(--block-color);
@@ -193,6 +194,7 @@
 }
 
 .option button{
+    width: 20%;
     padding: 5px;
     border-radius: 5px;
     background-color: var(--root-color);

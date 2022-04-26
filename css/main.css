@@ -40,6 +40,11 @@
     background-position:left bottom;
 }
 
+.hastag_line_1 span:active{
+    color: var(--root-color);
+    background-color: var(--block-color);
+}
+
 .gird_article_container{
     width: 100%;
     display: grid;
@@ -146,8 +151,8 @@
     word-break: keep-all;
     overflow-wrap: break-word;
     position: absolute;
-    bottom: 6px;
-    right: 6px;
+    bottom: 15px;
+    right: 15px;
 }
 
 @media screen and (max-width: 768px) {

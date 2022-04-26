@@ -55,7 +55,7 @@
     position: absolute;
     top: 3%;
     left: 50%;
-    background: var(--bean-color);
+    background: var(--root-color);
     width: 500px;
     height: 500px;
     margin-left: -250px;
@@ -72,7 +72,7 @@
 .wave.-two {
     animation: drift 7000ms infinite linear;
     opacity: 0.1;
-    background: var(--block-color);
+    background: var(--bean-color);
 }
 
 @keyframes drift {

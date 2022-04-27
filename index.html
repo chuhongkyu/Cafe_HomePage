@@ -15,7 +15,6 @@
     <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
 
     <script defer type="text/javascript" src="js/index.js"></script>
-    <script defer type="text/javascript" src="js/search.js"></script>
     <script defer type="text/javascript" src="js/map.js"></script>
     <script defer type="text/javascript" src="js/letter.js"></script>
     <script defer type="text/javascript" src="js/findHashtag.js"></script>
@@ -127,22 +126,22 @@
 
         <div id="hash" class="hashtag_box">
             <div class="hastag_line_1">
-                <span class="btnclick" onclick="findHashtag('mapo')">#마포구</span>
-                <span onclick="findHashtag('insta-feel')">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
-                <span onclick="findHashtag('warehouse')">#창고형</span>
-                <span onclick="findHashtag('mapo')">#커피</span>
-                <span onclick="findHashtag('concent')">#콘센트</span>
-                <span onclick="findHashtag('small')">#공부</span>
-                <span onclick="findHashtag('mapo')">#화장실</span>
+                <span class="hastag_btn" onclick="findHashtag('mapo', this)">#마포구</span>
+                <span class="hastag_btn" onclick="findHashtag('insta-feel', this )">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                <span class="hastag_btn" onclick="findHashtag('warehouse', this)">#창고형</span>
+                <span class="hastag_btn" onclick="findHashtag('mapo' , this)">#커피</span>
+                <span class="hastag_btn" onclick="findHashtag('concent', this)">#콘센트</span>
+                <span class="hastag_btn" onclick="findHashtag('small', this)">#공부</span>
+                <span class="hastag_btn" onclick="findHashtag('mapo', this)">#화장실</span>
             </div>
 
             <div class="hastag_line_1">
-                <span onclick="findHashtag('goods')">#굿즈</span>
+                <span class="hastag_btn" onclick="findHashtag('goods', this)">#굿즈</span>
                 <span>💑</span>
-                <span onclick="findHashtag('mapo')"><i class="fa-solid fa-camera"></i></span>
-                <span onclick="findHashtag('withDog')">🐕애견동반</span> 
-                <span onclick="findHashtag('small')">#아기자기한</span>
-                <span onclick="findHashtag('big')">#대형카페</span>
+                <span class="hastag_btn" onclick="findHashtag('mapo', this)"><i class="fa-solid fa-camera"></i></span>
+                <span class="hastag_btn" onclick="findHashtag('withDog', this)">🐕애견동반</span> 
+                <span class="hastag_btn" onclick="findHashtag('small', this)">#아기자기한</span>
+                <span class="hastag_btn" onclick="findHashtag('big', this)">#대형카페</span>
             </div>
         </div>
 
@@ -154,14 +153,14 @@
                     <h5>디벙크</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
-                            <span>#콘센트</span>
-                            <span>#커피</span>
-                            <span>💑</span>
+                            <span class="hastag_content_btn">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                            <span class="hastag_content_btn">#콘센트</span>
+                            <span class="hastag_content_btn">#커피</span>
+                            <span class="hastag_content_btn">💑</span>
                         </div>
                         <div class="hastag_line_1">
-                            <span>#화장실</span>
-                            <span><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">#화장실</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
                         </div>
                         
                         <a href="https://debunk.kr/" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -177,13 +176,13 @@
                     <h5>카페모아</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>#아기자기한</span>
-                            <span>#공부</span>
-                            <span>#커피</span>
+                            <span class="hastag_content_btn">#아기자기한</span>
+                            <span class="hastag_content_btn">#공부</span>
+                            <span class="hastag_content_btn">#커피</span>
                         </div>
                         <div class="hastag_line_1">
-                            <span>#콘센트</span>
-                            <span>#화장실</span>
+                            <span class="hastag_content_btn">#콘센트</span>
+                            <span class="hastag_content_btn">#화장실</span>
                         </div>
             
                         <a href="" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -200,14 +199,14 @@
                     <h5>포비베이직</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
-                            <span>💑</span>
-                            <span>#굿즈</span>
-                            <span>#커피</span>
+                            <span class="hastag_content_btn">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                            <span class="hastag_content_btn">💑</span>
+                            <span class="hastag_content_btn">#굿즈</span>
+                            <span class="hastag_content_btn">#커피</span>
                         </div>
                         <div class="hastag_line_1">
-                            <span>#대형카페</span>
-                            <span><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">#대형카페</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
                         </div>
             
                         <a href="https://fourb.co.kr/" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -226,16 +225,16 @@
                     <h5>빈브라더스</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
-                            <span>#창고형</span>
-                            <span>#대형카페</span>
-                            <span>#굿즈</span>
+                            <span class="hastag_content_btn">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                            <span class="hastag_content_btn">#창고형</span>
+                            <span class="hastag_content_btn">#대형카페</span>
+                            <span class="hastag_content_btn">#굿즈</span>
                         </div>
                         <div class="hastag_line_1">
-                            <span>💑</span>
-                            <span>#커피</span>
-                            <span>#화장실</span>
-                            <span onclick="findHashtag('mapo')"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">💑</span>
+                            <span class="hastag_content_btn">#커피</span>
+                            <span class="hastag_content_btn">#화장실</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
                         </div>
             
                         <a href="https://www.beanbrothers.co.kr/main/index.php" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -252,10 +251,10 @@
                     <h5>카페앤드에이</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>🐕애견동반</span>
-                            <span><i class="fa-solid fa-camera"></i></span>
-                            <span>#커피</span>
-                            <span>#아기자기한</span>
+                            <span class="hastag_content_btn">🐕애견동반</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">#커피</span>
+                            <span class="hastag_content_btn">#아기자기한</span>
                         </div>
             
                         <a href="https://www.instagram.com/cafe_and.a/" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -272,13 +271,13 @@
                     <h5>밤부 베이커리&브루잉</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span>#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
-                            <span>#대형카페</span>
-                            <span><i class="fa-solid fa-camera"></i></span>
-                            <span>#커피</span>
+                            <span class="hastag_content_btn">#<img style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                            <span class="hastag_content_btn">#대형카페</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">#커피</span>
                         </div>
                         <div class="hastag_line_1">
-                            <span>#화장실</span>
+                            <span class="hastag_content_btn">#화장실</span>
                         </div>
             
                         <a href="http://coffeedna.co.kr/index.html" target="blank"><span class="go_homePage">GO HOME</span></a>
@@ -295,11 +294,13 @@
                     <h5>콩카페</h5>
                     <div class="article_box_btn">
                         <div class="hastag_line_1">
-                            <span><i class="fa-solid fa-camera"></i></span>
-                            <span>#커피</span>
-                            <span>#아기자기한</span>
-                            <span>💑</span>
+                            <span class="hastag_content_btn"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hastag_content_btn">#커피</span>
+                            <span class="hastag_content_btn">#아기자기한</span>
+                            <span class="hastag_content_btn">💑</span>
+                            <span class="hastag_content_btn">#마포구</span>
                         </div>
+                        
             
                         <a href="https://www.instagram.com/congcaphe_kr/" target="blank"><span class="go_homePage">GO HOME</span></a>
                     </div>
@@ -307,6 +308,12 @@
             
             
                 <span class="safe_icon"></span>
+            </div>
+
+            <div class="article_contents default">
+                <div>
+                    <img src="img/coffe_01.png" alt="">
+                </div>
             </div>
 
 

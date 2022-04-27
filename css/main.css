@@ -91,6 +91,21 @@
     transition: 0.5s;
 }
 
+.article_contents:hover > .article_box {
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.article_contents:hover > .article_img{
+    height: 60%;
+    transition: 0.5s;
+}
+
+.article_contents:hover > .article_box{
+    height: 40%;
+    transition: 0.5s;
+}
+
 .article_img{
     width: 100%;
     height: 65%;

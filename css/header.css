@@ -7,6 +7,8 @@ header {
     white-space: nowrap;
 }
 
+/* 해더 시작 */
+
 .log_container {
     width: 100%;
     height: 60px;
@@ -33,6 +35,8 @@ header {
     color: var(--text-color2);
 }
 
+/* 여기까지가 왼쪽 */
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -52,6 +56,8 @@ nav a:hover {
     transition: 0.5s;
     color: var(--text-color2);
 }
+
+/* 여기까지가 오른쪽 */
 
 .slider_Container {
     width: 100%;
@@ -108,6 +114,8 @@ nav a:hover {
     padding: 20px;
 }
 
+/* 여기까지가 슬라이드 박스 1번 */
+
 .slide_coffee{
     width: 100%;
     height: 800px;
@@ -124,6 +132,8 @@ nav a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* 여기까지가 슬라이드 박스 2번 */
 
 .slide_Cup {
     width: 100%;
@@ -175,6 +185,8 @@ nav a:hover {
     transform: translate(-47%, -25%);
     animation: pullCoffee 1s 2.5s ease-in-out forwards;
 }
+
+/* 여기까지가 슬라이드 박스 3번 */
     
 .prev,
 .next {
@@ -235,6 +247,8 @@ nav a:hover {
     animation-duration: 1.5s;
 }
 
+/* 슬라이드 박스의 큰요소들 버튼, 사라짐, dot */
+
 .circle_text{
     text-align: center;
     display: flex;
@@ -259,6 +273,8 @@ svg text{
     letter-spacing: 20px;
     fill: var(--text-color2);
 }
+
+/* 요녀석이 돌아가는 친구 SVG 글자 */
 
 @keyframes fade {
     from {
@@ -330,10 +346,8 @@ svg text{
     }
 }
 
-/* background: linear-gradient(-130deg, rgb(128, 106, 47) 50%, var(--root-color) 50%);
-background-size: 100% 400%;
-animation: coffe-flow 10s 2s ease-in-out infinite;
-transition: 1s; */
+/* 피를 갈아 넣은 애니메이션들 */
+
 
 @media screen and (max-width: 768px) {
     .log_container {
@@ -369,3 +383,4 @@ transition: 1s; */
     }
 }
 
+/* 미디어 쿼리*/

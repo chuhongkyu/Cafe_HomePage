@@ -4,18 +4,20 @@
     overflow: hidden;
 }
 
+/* 메인 컨테이너 */
+
 .hashtag_box{
     width: 100%;
     padding: 50px 20px;
 }
 
-.hastag_line_1{
+.hashtag_line_1{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hastag_btn{
+.hashtag_btn{
     padding: 6px 15px;
     color: var(--text-color);
     font-weight: 600;
@@ -33,7 +35,7 @@
     align-items: center;
 }
 
-.hastag_btn:hover{
+.hashtag_btn:hover{
     transform: translateY(-2px);
     transition: 0.5s;
     color: var(--root-color);
@@ -46,6 +48,8 @@
     color: var(--root-color);
     background-position:left bottom;
 }
+
+/* 해쉬태그 박스 끝 */
 
 .gird_article_container{
     width: 100%;
@@ -71,7 +75,7 @@
     background-repeat: no-repeat;
 }
 
-.hastag_content_btn {
+.hashtag_content_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,6 +218,9 @@
     transition: 0.5s;
 }
 
+
+/* 힘들었던 그리드 카페 소개 컨텐츠  끝 */
+
 @media screen and (max-width: 768px) {
     .gird_article_container{
         padding: 10px 20px 50px 20px;
@@ -222,4 +229,7 @@
         display: none;
     }
 }
+
+
+/* 미디어 커리 */
 

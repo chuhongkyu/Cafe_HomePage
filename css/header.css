@@ -5,6 +5,7 @@ header {
     flex-direction: column;
     width: 100%;
     white-space: nowrap;
+    position: relative;
 }
 
 /* 해더 시작 */
@@ -27,13 +28,15 @@ header {
     justify-content: center;
     align-items: center;
     margin-left: 20px;
+    position: relative;
+}
+.log_box img{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    transform: rotateZ(20deg) scale(1.5);
 }
 
-.log_box h1{
-    margin-left: 20px;
-    font-size: 20px;
-    color: var(--text-color2);
-}
 
 /* 여기까지가 왼쪽 */
 
@@ -92,26 +95,34 @@ nav a:hover {
     flex-direction: column;
 }
 
-.slide_text_box h1{
-    width: 100%;
-    height: 300px;
-    font-size: 205px;
+.slide_text_box h1:first-of-type{
+    font-size: 200px;
+    line-height: 130px;
     color: var(--text-color);
     font-weight: 800;
-    margin-top: -100px;
+    font-family: 'Oswald',
+    sans-serif;
 }
+
+.slide_text_box h1{
+    color: var(--text-color);
+    font-size: 140px;
+}
+
+/* 요놈이 그 글 */
 
 .letter_box{
     width: 300px;
     height: 50px;
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
-    border-radius: 25px;
+    color: rgb(104, 103, 103);
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
     padding: 20px;
+    font-size: 50px;
+    font-family: 'Nanum Pen Script',
+    cursive;
 }
 
 /* 여기까지가 슬라이드 박스 1번 */
@@ -198,7 +209,7 @@ nav a:hover {
     margin-top: -22px;
     color: var(--block-color);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -266,8 +277,8 @@ svg {
 
 svg text{
     font-size: 50px;
-    font-family: Helvetica Neue,
-    sans-serif;
+    /* font-family: Helvetica Neue,
+    sans-serif; */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 20px;
@@ -356,26 +367,29 @@ svg text{
     nav {
         display: none;
     }
-    svg{
-        display: none;
-    }
     .log_box h1 {
         font-size: 20px;
     }
+    .circle_text{
+        left: -300px;
+
+    }
+    .slide_text_box h1:first-of-type{
+        font-size: 120px;
+    }
     .slide_text_box{
-        top: 60%;
-        left: 20%;
+        top: 50%;
+        left: 10%;
     }
     .slide_text_box h1{
-        font-size: 150px;
-        height: 250px;
+        font-size: 85px;
     }
     .log_container{
         padding: 5px;
     }
     .letter_box {
         color: var(--text-color2);
-        border: 2px solid var(--text-color2);
+        font-size: 30px;
     }
     .slide_coffee img {
         width: 200px;

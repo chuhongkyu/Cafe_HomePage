@@ -6,6 +6,8 @@ header {
     width: 100%;
     white-space: nowrap;
     position: relative;
+    font-family: 'Oswald',
+    sans-serif;
 }
 
 /* 해더 시작 */
@@ -18,7 +20,7 @@ header {
     align-items: center;
     background-color: var(--bg-color);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 10px -10px;
-    padding: 0px 100px;
+    padding: 0px 150px;
     z-index: 1;
 }
 
@@ -30,14 +32,13 @@ header {
     margin-left: 20px;
     position: relative;
 }
+
 .log_box img{
     position: absolute;
     top: 20px;
-    left: 16px;
+    left: -50px;
     transform: rotateZ(20deg) scale(1.5);
 }
-
-
 /* 여기까지가 왼쪽 */
 
 nav{

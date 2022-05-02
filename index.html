@@ -6,23 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마포구 이쁜 카페</title>
 
-    <link rel="icon" href="img/favicon/favicon.png" />
-   
+    <link rel="icon" href="img/favicon/favicon.png" />  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Oswald:wght@300;700&display=swap"
         rel="stylesheet">
 
-
-
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd2759b5a2cc444cb8bc2518b5c2b40b&libraries=services,clusterer,drawing"></script>
-    <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
 
     <script defer type="text/javascript" src="js/index.js"></script>
     <script defer type="text/javascript" src="js/map.js"></script>
     <script defer type="text/javascript" src="js/letter.js"></script>
     <script defer type="text/javascript" src="js/findHashtag.js"></script>
-    
+    <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -140,7 +136,7 @@
 
             <div class="hashtag_line_1">
                 <span class="hashtag_btn" onclick="findHashtag('goods', this)">#굿즈</span>
-                <span>💑</span>
+                <span class="hashtag_btn">💑</span>
                 <span class="hashtag_btn" onclick="findHashtag('mapo', this)"><i class="fa-solid fa-camera"></i></span>
                 <span class="hashtag_btn" onclick="findHashtag('withDog', this)">🐕애견동반</span> 
                 <span class="hashtag_btn" onclick="findHashtag('small', this)">#아기자기한</span>
@@ -313,6 +309,61 @@
                 <span class="safe_icon"></span>
             </div>
 
+            <div class="article_contents mapo big">
+                <div class="article_img"></div>
+                <div class="article_box">
+                    <h5>스타벅스-망원한강</h5>
+                    <div class="article_box_btn">
+                        <div class="hashtag_line_1">
+                            <span class="hashtag_content_btn"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hashtag_content_btn">#커피</span>
+                            <span class="hashtag_content_btn">#대형카페</span>
+                            <span class="hashtag_content_btn">💑</span>
+                            <span class="hashtag_content_btn">#<img style="width: 20px; height: 20px;"
+                                    src="img/insta_icon.png" alt="#">감성충만</span>
+                        </div>
+                        <div class="hashtag_line_1">
+                            <span class="hashtag_content_btn">#화장실</span>
+                        </div>
+            
+            
+                        <a href="https://www.starbucks.co.kr/index.do" target="blank"><span class="go_homePage">GO
+                                HOME</span></a>
+                    </div>
+                </div>
+            
+            
+                <span class="safe_icon"></span>
+            </div>
+
+            <div class="article_contents mapo big withDog">
+                <div class="article_img"></div>
+                <div class="article_box">
+                    <h5>프릳츠</h5>
+                    <div class="article_box_btn">
+                        <div class="hashtag_line_1">
+                            <span class="hashtag_content_btn"><i class="fa-solid fa-camera"></i></span>
+                            <span class="hashtag_content_btn">#커피</span>
+                            <span class="hashtag_content_btn">#대형카페</span>
+                            <span class="hashtag_content_btn">💑</span>
+                            <span class="hashtag_btn" onclick="findHashtag('insta-feel', this )">#<img
+                                    style="width: 20px; height: 20px;" src="img/insta_icon.png" alt="#">감성충만</span>
+                        </div>
+                        <div class="hashtag_line_1">
+                            <span class="hashtag_content_btn">#화장실</span>
+                            <span class="hashtag_content_btn">🐕애견동반</span>
+                        </div>
+            
+            
+                        <a href="https://www.fritz.co.kr/" target="blank"><span class="go_homePage">GO
+                                HOME</span></a>
+                    </div>
+                </div>
+            
+            
+                <span class="safe_icon"></span>
+            </div>
+
             <div class="article_contents default">
                 <div>
                     <img src="img/coffe_01.png" alt="">
@@ -329,7 +380,13 @@
     <section class="map_container">
         <h1>카페 위치</h1>
         <div class="map_wrap">
-            <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+            <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;">
+                <div class="map_expand_btns">
+                    <span onclick="zoomIn()"><i class="fa-solid fa-plus"></i></span>
+                    <span onclick="zoomOut()"><i class="fa-solid fa-minus"></i></span>
+                </div>
+                
+            </div>
         
             <div id="menu_wrap" class="bg_white">
                 <div class="option">
@@ -367,9 +424,9 @@
 
     <footer id="footer">
         <div class="sns_box">
-            <img style="width:90px; height:90px;" src="img/footerSns/icons8-facebook.svg" alt="">
-            <img src="img/footerSns/icons8-인스-타-그램 (2).svg" alt="">
-            <img src="img/footerSns/icons8-지저귀다.svg" alt="">
+            <img src="img/footerSns/icons8-facebook.svg" alt="#">
+            <img src="img/footerSns/icons8-인스-타-그램 (2).svg" alt="#">
+            <img src="img/footerSns/icons8-지저귀다.svg" alt="#">
         </div>
         <div class="footer_box">
             <div class="footer_logo_box">

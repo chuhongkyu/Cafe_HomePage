@@ -2,6 +2,7 @@
     width: 100%;
     background-color: var(--bg-color);
     overflow: hidden;
+    font-family: sans-serif;
 }
 
 /* 메인 컨테이너 */
@@ -58,6 +59,7 @@
     grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
     padding: 10px 140px 50px 140px;
     gap: 50px;
+    place-items: center;
 }
 
 .article_contents{
@@ -73,21 +75,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.hashtag_content_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 15px;
-    color: var(--text-color);
-    font-weight: 500;
-    border-radius: 25px;
-    margin: 3px;
-    white-space: nowrap;
-    transition: 0.5s;
-    background-color: var(--root-color);
-    font-size: 15px;
 }
 
 .article_contents:hover{
@@ -175,6 +162,12 @@
     background-color: var(--bg-color);
 }
 
+.article_box h5{
+    width: 100%;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
 .safe_icon{
     width: 80px;
     height: 80px;
@@ -186,28 +179,32 @@
     left: -40px;
 }
 
-.article_box_btn a{
-    text-decoration: none;
-    color: black;
-}
-
 .article_box_btn{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 100%;
     white-space: nowrap;
 }
 
-.article_box h5{
-    width: 100%;
-    font-size: 25px;
-    margin-bottom: 15px;
+.hashtag_content_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 15px;
+    color: var(--text-color);
+    font-weight: 800;
+    border-radius: 25px;
+    margin: 3px;
+    white-space: nowrap;
+    transition: 0.5s;
+    background-color: var(--root-color);
+    font-size: 15px;
 }
 
 .go_homePage{
-    border: 2px solid var(--text-color);
+    border: 2px solid #1C1C1C;
     border-radius: 25px;
     padding: 5px 15px 5px 15px;
     word-break: keep-all;
@@ -216,11 +213,13 @@
     bottom: 15px;
     right: 15px;
     transition: 0.5s;
+    text-decoration: none;
+    color: #1C1C1C;
 }
 
 .go_homePage:hover{
     color: var(--bg-color);
-    background-color: var(--text-color);
+    background-color: #1C1C1C;
     transition: 0.5s;
 }
 
@@ -229,11 +228,30 @@
 
 @media all and (max-width: 740px) {
     .gird_article_container{
-        padding: 10px 50px 50px 50px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+        padding: 10px 40px 50px 40px;
+        gap: 50px;
+        place-items: center;
+    }
+    .article_contents{
+        height: 450px;
+    }
+    .article_box {
+        padding: 5px;
+    }
+    .hashtag_content_btn{
+        font-size: 13px;
+    }
+    .hashtag_btn{
+        font-size: 14px;
+    }
+    .hashtag_line_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 5rem 1fr;
     }
     
 }
-
 
 /* 미디어 커리 */
 

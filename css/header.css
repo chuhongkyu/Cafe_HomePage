@@ -389,7 +389,7 @@ svg text{
         left: -300px;
     }
     header{
-        height: 700px;
+        height: 600px;
     }
     svg{
         height: 550px;
@@ -411,6 +411,7 @@ svg text{
     }
     .slide_first_section_text h1:first-of-type{
         font-size: 120px;
+        line-height: 100px;
     }
     .slide_first_section_text h1{
         font-size: 85px;

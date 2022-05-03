@@ -35,6 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .hashtag_btn:hover{
@@ -187,7 +188,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
+    grid-template-rows: 35px 35px;
 }
 
 .hashtag_content_btn {
@@ -243,14 +244,15 @@
         place-items: center;
     }
     .article_box {
-        padding: 5px;
+        padding: 10px;
     }
     .hashtag_content_btn{
-        font-size: 13px;
+        font-size: 12px;
     }
     .hashtag_btn{
-        font-size: 14px;
+        font-size: 13px;
     }
+    
     .hashtag_line_1{
         display: grid;
         grid-template-columns: 1fr 1fr 0.8fr 1fr;

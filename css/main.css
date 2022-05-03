@@ -227,7 +227,7 @@
 
 /* 힘들었던 그리드 카페 소개 컨텐츠  끝 */
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 740px) {
     .gird_article_container{
         padding: 10px 50px 50px 50px;
     }

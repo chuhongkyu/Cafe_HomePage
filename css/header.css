@@ -78,39 +78,50 @@ nav a:hover {
     height: 100%;
 }
 
-.slide_Box img{
-    height: 800px;
-    position: absolute;
-    top: 0;
-    right: 10vw;
+.slide_first_section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slide_text_box{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    text-align: end;
-    width: 700px;
+.slide_first_section_text {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
 }
 
-.slide_text_box h1:first-of-type{
+.slide_first_section_text h1:first-of-type {
     font-size: 200px;
     line-height: 130px;
     color: var(--text-color);
     font-weight: 800;
     font-family: 'Oswald',
-    sans-serif;
+        sans-serif;
 }
 
-.slide_text_box h1{
+.slide_first_section_text h1 {
     color: var(--text-color);
     font-size: 140px;
 }
+
+.slide_first_section_img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* position: absolute;
+    top: 0;
+    right: 10vw; */
+}
+.slide_first_section_img img{
+    height: 800px;
+}
+
 
 /* 요놈이 그 글 */
 
@@ -364,7 +375,7 @@ svg text{
 /* 피를 갈아 넣은 애니메이션들 */
 
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 740px) {
     .log_container {
         padding: 5px;
     }
@@ -391,19 +402,24 @@ svg text{
         left: -60px;
         transform: rotateZ(20deg) scale(0.9);
     }
-    .slide_text_box h1:first-of-type{
-        font-size: 120px;
-    }
-    .slide_text_box{
-        top: 50%;
-        left: 10%;
-    }
-    .slide_text_box h1{
-        font-size: 85px;
-    }
-    .log_container{
+    .log_container {
         padding: 5px;
     }
+    .slide_first_section_text{
+        width: 100%;
+        align-items: center;
+    }
+    .slide_first_section_text h1:first-of-type{
+        font-size: 120px;
+    }
+    .slide_first_section_text h1{
+        font-size: 85px;
+    }
+    .slide_first_section_img {
+        width: 0;
+        display: none;
+    }
+    
     .letter_box {
         color: var(--text-color2);
         font-size: 30px;

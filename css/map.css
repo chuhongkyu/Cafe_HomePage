@@ -240,7 +240,7 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 740px) and (max-width: 786px) and (max-width: 844px) {
     .map_wrap {
         width: 100%;
         height: 60%;

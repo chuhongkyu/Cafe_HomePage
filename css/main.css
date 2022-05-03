@@ -19,6 +19,13 @@
     align-items: center;
 }
 
+.hashtag_line_2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .hashtag_btn{
     padding: 6px 15px;
     color: var(--text-color);
@@ -60,7 +67,6 @@
     grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
     padding: 10px 140px 50px 140px;
     gap: 50px;
-    place-items: center;
 }
 
 .article_contents{
@@ -69,7 +75,6 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-    /* background-color: aliceblue; */
     transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;

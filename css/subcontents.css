@@ -14,6 +14,7 @@
     /* background: var(--root-color); */
     background: url(../img/main_bg04.png) fixed;
     background-position: bottom center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -19,13 +19,6 @@
     align-items: center;
 }
 
-.hashtag_line_2 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 .hashtag_btn{
     padding: 6px 15px;
     color: var(--text-color);
@@ -187,14 +180,18 @@
 
 .article_box_btn{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     white-space: nowrap;
 }
+.hashtag_line_2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
+}
 
 .hashtag_content_btn {
+    grid-column: span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,6 +218,8 @@
     transition: 0.5s;
     text-decoration: none;
     color: #1C1C1C;
+    font-size: 15px;
+    z-index: 1;
 }
 
 .go_homePage:hover{
@@ -235,12 +234,12 @@
 @media all and (max-width: 740px) {
     .gird_article_container{
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
         padding: 10px 20px 50px 20px;
         gap: 50px;
     }
     .article_contents{
-        height: 450px;
+        height: 500px;
         place-items: center;
     }
     .article_box {
@@ -255,6 +254,15 @@
     .hashtag_line_1{
         display: grid;
         grid-template-columns: 1fr 1fr 0.8fr 1fr;
+    }
+    .go_homePage{
+        font-size: 13px;
+    }
+    .safe_icon {
+        width: 50px;
+        height: 50px;
+        top: -20px;
+        left: -20px;
     }
     
 }

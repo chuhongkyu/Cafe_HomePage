@@ -242,10 +242,20 @@
 
 @media screen and (max-width: 768px) {
     .map_wrap {
+        width: 100%;
+        height: 60%;
         flex-direction: column;
     }
     #menu_wrap{
         width: 100%;
+        height: 90%;
+    }
+    .map_container{
+        background: var(--bean-color);
+    }
+    .map_expand_btns span{
+        width: 25px;
+        height: 25px;
     }
 }
 

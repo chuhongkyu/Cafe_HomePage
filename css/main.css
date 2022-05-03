@@ -227,13 +227,11 @@
 
 /* 힘들었던 그리드 카페 소개 컨텐츠  끝 */
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     .gird_article_container{
-        padding: 10px 20px 50px 20px;
+        padding: 10px 50px 50px 50px;
     }
-    .event{
-        display: none;
-    }
+    
 }
 
 

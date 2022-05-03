@@ -13,6 +13,7 @@
 }
 
 .hashtag_line_1{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,14 +229,14 @@
 
 @media all and (max-width: 740px) {
     .gird_article_container{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
-        padding: 10px 40px 50px 40px;
+        padding: 10px 20px 50px 20px;
         gap: 50px;
-        place-items: center;
     }
     .article_contents{
         height: 450px;
+        place-items: center;
     }
     .article_box {
         padding: 5px;
@@ -248,7 +249,7 @@
     }
     .hashtag_line_1{
         display: grid;
-        grid-template-columns: 1fr 1fr 5rem 1fr;
+        grid-template-columns: 1fr 1fr 0.8fr 1fr;
     }
     
 }

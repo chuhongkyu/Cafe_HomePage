@@ -8,6 +8,8 @@ footer{
     flex-direction: column;
     white-space: nowrap;
     overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(77, 76, 76);
 }
 
 .sns_box{

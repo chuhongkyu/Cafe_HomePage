@@ -241,6 +241,10 @@
     transition: 0.5s;
 }
 
+.content_style{
+    padding: 5px 10px;
+}
+
 @media all and (max-width: 740px) and (max-width: 786px) and (max-width: 844px) {
     .map_wrap {
         width: 100%;

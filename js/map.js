@@ -230,7 +230,7 @@ function displayPagination(pagination) {
 
 // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다 인포윈도우에 장소명을 표시합니다
 function displayInfowindow(marker, title) {
-    let content = `<span style="padding: 5px 10px;">${title}</span>`;
+    let content = `<div class="content_style">${title}</div>`;
 
     infowindow.setContent(content);
     infowindow.open(map, marker);

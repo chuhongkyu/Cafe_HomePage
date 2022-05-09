@@ -1,11 +1,4 @@
 :root {
-    /* --text-color:#dec28c;
-    --bg-color: #dec28c;
-    --root-color: #3d717d;
-    --block-color: #c0a878;
-    --bean-color: #7B554A;
-     */
-
     --text-color:black;
     --bg-color: white;
     --root-color: #fcf4e3;
@@ -13,3 +6,6 @@
     --bean-color: #7B554A;
     --text-color2: #dec28c;
 }
+
+
+/* 색깔들 */

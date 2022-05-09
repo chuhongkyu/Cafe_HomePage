@@ -114,9 +114,6 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* position: absolute;
-    top: 0;
-    right: 10vw; */
 }
 .slide_first_section_img img{
     height: 800px;

@@ -1,3 +1,6 @@
+// 슬라이드 박스 움직이기
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -32,4 +35,5 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-console.log(document.target)
+// console.log(document.target)
+

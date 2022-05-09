@@ -19,3 +19,6 @@ function findHashtag(hash, item){
     item.classList.add("hashtag_click");
     // 선택한 친구 색 바꾼다는 뜻.
 }
+
+
+// 버튼 클릭시 findeHastag 실행 hash는 찾는 클래스, item은 누른 버튼 자신

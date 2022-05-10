@@ -102,6 +102,23 @@
     margin-left: 5px;
 }
 
+#menu_wrap::-webkit-scrollbar {
+    width: 20px;
+}
+
+#menu_wrap::-webkit-scrollbar-thumb {
+    background-color: var(--block-color);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px rgb(124, 124, 124);
+}
+
+#menu_wrap::-webkit-scrollbar-track {
+    background-color: var(--root-color);
+    padding: 0px 2px;
+}
+
+/* 스크롤바 디자인 */
+
 #placesList li {
     list-style: none;
 }
@@ -239,6 +256,10 @@
     border: none;
 }
 
+.option{
+    width: 100%;
+}
+
 .option button{
     width: 20%;
     padding: 5px;
@@ -265,8 +286,6 @@
 }
 
 /* 검색창 */
-
-
 
 .content_style{
     padding: 5px 10px;

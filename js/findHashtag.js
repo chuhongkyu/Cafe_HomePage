@@ -1,3 +1,7 @@
+// 1.버튼에 함수를 달것이다.
+// 2.버튼을 누르면 해쉬태그(hashTagList)클래스 리스트 안에서 해쉬(hash)클래스를 찾아 보여주고 감춘다.
+// 3.사용한 버튼 this(item)은 잠시 눌러진 상태로 표현할 것이다.
+
 const hashTagList = document.querySelectorAll(".article_contents");
 const hashBtn = document.querySelectorAll(".hashtag_btn");
 

@@ -4,42 +4,30 @@ let markers = [];
 
 let mapContainer = document.getElementById('map'), 
     mapOption = {
-        center: new kakao
-            .maps
-            .LatLng(37.5626415, 126.9043775), 
+        center: new kakao.maps.LatLng(37.5626415, 126.9043775), 
         draggable: false,
         level: 3 
     };
-
 // 지도를 생성
 
-let map = new kakao
-    .maps
-    .Map(mapContainer, mapOption);
-
+let map = new kakao.maps.Map(mapContainer, mapOption);
 // 장소 검색 객체를 생성
 
-let ps = new kakao
-    .maps
-    .services
-    .Places();
-
+let ps = new kakao.maps.services.Places();
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성
 
-let infowindow = new kakao
-    .maps
-    .InfoWindow({zIndex: 1});
+let infowindow = new kakao.maps.InfoWindow({zIndex: 1});
 
 searchPlaces();  // 키워드 검색을 요청하는 함수
 
 function searchPlaces() {
-    let keyword = document
-        .getElementById('cafe_selecter').value; 
-        //** 카페 셀렉터 input 
+    let keyword = document.getElementById("cafe_selecter").value; 
+        //** 카페 셀렉터 input 가져오기
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
         return false;
+        //**공백제거 */
     }
 
     // 장소검색 객체를 통해 키워드로 장소검색을 요청
@@ -70,29 +58,23 @@ function placesSearchCB(data, status, pagination) {
     }
 }
 
-// 검색 결과 목록과 마커를 표출하는 함수입니다
+// 검색 결과 목록과 마커를 표출하는 함수.
 function displayPlaces(places) {
-
     let listEl = document.getElementById('placesList'),
         menuEl = document.getElementById('menu_wrap'),
         fragment = document.createDocumentFragment(),
-        bounds = new kakao
-            .maps
-            .LatLngBounds(),
+        bounds = new kakao.maps.LatLngBounds(),
         listStr = '';
 
-    // 검색 결과 목록에 추가된 항목들을 제거합니다
+    // 검색 결과 목록에 추가된 항목들을 제거.
     removeAllChildNods(listEl);
 
-    // 지도에 표시되고 있는 마커를 제거합니다
+    // 지도에 표시되고 있는 마커를 제거.
     removeMarker();
 
     for (let i = 0; i < places.length; i++) {
-
-        // 마커를 생성하고 지도에 표시합니다
-        let placePosition = new kakao
-                .maps
-                .LatLng(places[i].y, places[i].x),
+        // 마커를 생성하고 지도에 표시.
+        let placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
             marker = addMarker(placePosition, i),
             itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
 
@@ -102,17 +84,13 @@ function displayPlaces(places) {
         // 마커와 검색결과 항목에 mouseover 했을때 해당 장소에 인포윈도우에 장소명을 표시합니다 mouseout 했을 때는 인포윈도우를
         // 닫습니다
         (function (marker, title) {
-            kakao
-                .maps
-                .event
-                .addListener(marker, 'mouseover', function () {
+            kakao.maps.event.addListener(marker, 'mouseover', 
+            function () {
                     displayInfowindow(marker, title);
                 });
 
-            kakao
-                .maps
-                .event
-                .addListener(marker, 'mouseout', function () {
+            kakao.maps.event.addListener(marker, 'mouseout', 
+            function () {
                     infowindow.close();
                 });
 
@@ -123,6 +101,7 @@ function displayPlaces(places) {
             itemEl.onmouseout = function () {
                 infowindow.close();
             };
+            
         })(marker, places[i].place_name);
 
         fragment.appendChild(itemEl);
@@ -136,24 +115,22 @@ function displayPlaces(places) {
     map.setBounds(bounds);
 }
 
-
-
 // 검색결과 항목을 Element로 반환하는 함수입니다
 function getListItem(index, places) {
-
     let el = document.createElement('li'),
-        itemStr = '<span class="markerBg marker_' + (
-            index + 1
-        ) + '"></span><div class="info">   <h5>' + places.place_name + '</h5>';
+        itemStr = `<span class="markerBg marker_${index + 1}"></span><div class="info"><h5>${places.place_name}</h5>`;
+        //여기서 div를 염
 
     if (places.road_address_name) {
-        itemStr += '    <span>' + places.road_address_name +
-                '</span>   <span class="jibun gray">' + places.address_name + '</span>';
+        itemStr += `<span>${places.road_address_name}</span><span class="jibun gray">${places.address_name}</span>`
+       
     } else {
-        itemStr += '    <span>' + places.address_name + '</span>';
+        itemStr += `<span>${places.address_name}</span>`;
     }
 
-    itemStr += '  <span class="tel">' + places.phone + '</span></div>';
+    itemStr += `<span class="tel">${places.phone}</span></div>`;
+    //**여기서 div를 닫음 **
+    //**지번이 있다면 지번 번호. 아니면 번호만 **
 
     el.innerHTML = itemStr;
     el.className = 'item';
@@ -166,25 +143,20 @@ function getListItem(index, places) {
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx) {
     let imageSrc = '../img/coffee_mark.png', //** Coffee 스티커 모양으로 사용 아래는 크기 설정
-        imageSize = new kakao
-            .maps
-            .Size(36, 37), // 마커 이미지의 크기
+        imageSize = new kakao.maps
+                .Size(36, 37), // 마커 이미지의 크기
         imgOptions = {
-            spriteSize: new kakao
-                .maps
+            spriteSize: new kakao.maps
                 .Size(36, 691), // 스프라이트 이미지의 크기
-            spriteOrigin: new kakao
-                .maps
+            spriteOrigin: new kakao.maps
                 .Point(0, (idx * 46) + 10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
-            offset: new kakao
-                .maps
+            offset: new kakao.maps
                 .Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
         },
-        markerImage = new kakao
-            .maps
+
+        markerImage = new kakao.maps
             .MarkerImage(imageSrc, imageSize, imgOptions),
-        marker = new kakao
-            .maps
+        marker = new kakao.maps
             .Marker({
                 position: position, // 마커의 위치
                 image: markerImage

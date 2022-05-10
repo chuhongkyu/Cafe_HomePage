@@ -26,7 +26,7 @@ searchPlaces();  // 키워드 검색을 요청하는 함수
 
 function searchPlaces() {
     let keyword = document.getElementById("cafe_selecter").value; 
-        //** 카페 셀렉터 input 가져오기
+        //----------카페 셀렉터 input 가져오기--------------------------
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
@@ -133,8 +133,8 @@ function getListItem(index, places) {
     }
 
     itemStr += `<span class="tel">${places.phone}</span></div>`;
-    //**여기서 div를 닫음 **
-    //**지번이 있다면 지번 번호. 아니면 번호만 **
+    //--여기서 div를 닫음 --
+    //--지번이 있다면 지번 번호. 아니면 번호만 --
 
     el.innerHTML = itemStr;
     el.className = 'item';
@@ -146,7 +146,7 @@ function getListItem(index, places) {
 
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx) {
-    let imageSrc = '../img/coffee_mark.png', //** Coffee 스티커 모양으로 사용 아래는 크기 설정
+    let imageSrc = '../img/coffee_mark.png', //---- Coffee 스티커 모양으로 사용 아래는 크기 설정
         imageSize = new kakao.maps
                 .Size(36, 37), // 마커 이미지의 크기
         imgOptions = {

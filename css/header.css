@@ -283,14 +283,12 @@ nav a:hover {
     z-index: 1;
 }
 
-svg {
+.circle_text svg {
     height: 620px;
 }
 
-svg text{
+.circle_text svg text{
     font-size: 50px;
-    /* font-family: Helvetica Neue,
-    sans-serif; */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 20px;

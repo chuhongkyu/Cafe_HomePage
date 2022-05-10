@@ -18,6 +18,23 @@ footer{
     align-items: center;
 }
 
+.sns_box a:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.sns_box a:hover > img{
+    background-color: #e21616;
+}
+
+.sns_box a:hover > .facebook {
+    background-color: #1c509a;
+}
+
+.sns_box a:hover > .twiter {
+    background-color: #1d9bf0;
+}
+
 .sns_box img{
     width: 100px;
     height: 100px;
@@ -36,10 +53,16 @@ footer{
 
 .footer_logo_box {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .footer_logo_box h5{
     color: var(--text-color2);
+}
+
+.footer_mark img:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
 }
 
 

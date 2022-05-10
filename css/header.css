@@ -120,7 +120,7 @@ nav a:hover {
 }
 
 
-/* 요놈이 그 글 */
+/* 랜덤하게 바뀌는 글 letter 박스 */
 
 .letter_box{
     width: 100%;
@@ -297,7 +297,7 @@ svg text{
     fill: var(--text-color2);
 }
 
-/* 요녀석이 돌아가는 친구 SVG 글자 */
+/* 돌아가는 텍스트 글자 */
 
 @keyframes fade {
     from {
@@ -308,6 +308,8 @@ svg text{
         opacity: 1
     }
 }
+
+/* 슬라이드 박스의 사라지는 효과 */
 
 @keyframes pullDown {
     0% {
@@ -369,7 +371,7 @@ svg text{
     }
 }
 
-/* 피를 갈아 넣은 애니메이션들 */
+/* 3번째 슬라이드 박스의 애니메이션들 */
 
 
 @media all and (max-width: 740px)

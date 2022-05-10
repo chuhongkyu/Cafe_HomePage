@@ -1,3 +1,5 @@
+// 기본 카카오 API 지도
+
 let markers = [];
 
 let mapContainer = document.getElementById('map'), 
@@ -9,42 +11,43 @@ let mapContainer = document.getElementById('map'),
         level: 3 
     };
 
-// 지도를 생성합니다
+// 지도를 생성
+
 let map = new kakao
     .maps
     .Map(mapContainer, mapOption);
 
-// 장소 검색 객체를 생성합니다
+// 장소 검색 객체를 생성
+
 let ps = new kakao
     .maps
     .services
     .Places();
 
-// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성
+
 let infowindow = new kakao
     .maps
     .InfoWindow({zIndex: 1});
 
-// 키워드로 장소를 검색합니다
-searchPlaces();
+searchPlaces();  // 키워드 검색을 요청하는 함수
 
-// 키워드 검색을 요청하는 함수입니다
 function searchPlaces() {
-
     let keyword = document
-        .getElementById('cafe_selecter')
-        .value;
+        .getElementById('cafe_selecter').value; 
+        //** 카페 셀렉터 input 
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
         return false;
     }
 
-    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
+    // 장소검색 객체를 통해 키워드로 장소검색을 요청
     ps.keywordSearch(keyword, placesSearchCB);
 }
 
 // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
+
 function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
 
@@ -133,6 +136,8 @@ function displayPlaces(places) {
     map.setBounds(bounds);
 }
 
+
+
 // 검색결과 항목을 Element로 반환하는 함수입니다
 function getListItem(index, places) {
 
@@ -156,9 +161,11 @@ function getListItem(index, places) {
     return el;
 }
 
+
+
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx) {
-    let imageSrc = '../img/coffee_mark.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+    let imageSrc = '../img/coffee_mark.png', //** Coffee 스티커 모양으로 사용 아래는 크기 설정
         imageSize = new kakao
             .maps
             .Size(36, 37), // 마커 이미지의 크기
@@ -228,9 +235,9 @@ function displayPagination(pagination) {
     paginationEl.appendChild(fragment);
 }
 
-// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다 인포윈도우에 장소명을 표시합니다
+// 인포윈도우에 장소명을 표시합니다
 function displayInfowindow(marker, title) {
-    let content = `<div class="content_style">${title}</div>`;
+    let content = `<div class="content_style">${title}</div>`; //** content_style로 이름을 적어 인포 윈도우에 표시
 
     infowindow.setContent(content);
     infowindow.open(map, marker);
@@ -242,8 +249,6 @@ function removeAllChildNods(el) {
         el.removeChild(el.lastChild);
     }
 }
-
-console.log(markers);
 
 function zoomIn() {
     map.setLevel(map.getLevel() - 1);

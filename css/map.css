@@ -1,4 +1,25 @@
 /* map */
+
+.map_container {
+    width: 100%;
+    height: 100%;
+    background: url(../img/main_bg04.png) fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map_container h1 {
+    font-size: 55px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* 기본 맵 컨테이너 전체 박스 */
+
 .map_wrap,
 .map_wrap * {
     margin: 0;
@@ -22,6 +43,41 @@
     align-items: center;
 }
 
+/* map_expand +,- 확대 버튼 */
+
+.map_expand_btns {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 10px;
+    right: 10px;
+}
+
+.map_expand_btns span {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--root-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.map_expand_btns span:hover {
+    background-color: var(--block-color);
+    transition: 0.5s;
+}
+
+/* 맵을 갖고 있는 지도를 감싸는 박스 */
+
 #menu_wrap {
     padding: 10px;
     overflow-y: auto;
@@ -32,10 +88,6 @@
     font-size: 12px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.bg_white {
-    background: var(--bg-color);
 }
 
 #menu_wrap .option {
@@ -176,6 +228,8 @@
     color: #777;
 }
 
+/* 페이지 지도 메뉴 아래 숫자*/
+
 #cafe_selecter{
     width: 80%;
     padding: 5px;
@@ -210,36 +264,9 @@
     padding: 0px 5px 5px 5px;
 }
 
-.map_expand_btns{
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    bottom: 10px;
-    right: 10px;
-}
+/* 검색창 */
 
-.map_expand_btns span{
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: var(--root-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-weight: 600;
-}
 
-.map_expand_btns span:hover{
-    background-color: var(--block-color);
-    transition: 0.5s;
-}
 
 .content_style{
     padding: 5px 10px;

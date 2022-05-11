@@ -23,5 +23,6 @@
 ### 배포
 
 - https://mapocafe.netlify.app
+- https://chuhongkyu.github.io/Cafe_HomePage
 
 > 이 프로젝트는 마포구 청년 일자리 사업단과 함께 합니다. 📮

@@ -22,6 +22,6 @@
 
 ### 배포
 
-- https://wonderful-alfajores-a213e5.netlify.app/
+- https://mapocafe.netlify.app
 
 > 이 프로젝트는 마포구 청년 일자리 사업단과 함께 합니다. 📮

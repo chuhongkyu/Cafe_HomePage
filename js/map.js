@@ -143,10 +143,9 @@ function getListItem(index, places) {
 }
 
 
-
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx) {
-    let imageSrc = 'img/coffee_mark.png', //---- Coffee 스티커 모양으로 사용 아래는 크기 설정
+    let imageSrc = './img/coffee_mark.png', //---- Coffee 스티커 모양으로 사용 아래는 크기 설정
         imageSize = new kakao.maps
                 .Size(36, 37), // 마커 이미지의 크기
         imgOptions = {

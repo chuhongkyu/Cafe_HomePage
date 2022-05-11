@@ -1,3 +1,9 @@
+/* 
+*해더
+**로고, 내비 버튼
+**슬라이드 박스(3)
+*/
+
 header {
     display: flex;
     justify-content: center;
@@ -12,8 +18,7 @@ header {
     overflow: hidden;
 }
 
-/* 해더 시작 */
-
+/* 로고, 내비 버튼 */
 .log_container {
     width: 100%;
     height: 60px;
@@ -26,8 +31,8 @@ header {
     z-index: 1;
 }
 
+/* 로고 */
 .log_box{
-    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,15 +46,15 @@ header {
     left: -50px;
     transform: rotateZ(20deg) scale(1.5);
 }
-/* 여기까지가 왼쪽 */
 
-nav{
+/* 내비 버튼 */
+.log_container nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-nav a{
+.log_container nav a{
     text-decoration: none;
     margin: 15px;
     padding: 5px;
@@ -58,13 +63,36 @@ nav a{
     color: var(--text-color);
 }
 
-nav a:hover {
+.log_container nav a:hover {
     transition: 0.5s;
     color: var(--text-color2);
 }
 
-/* 여기까지가 오른쪽 */
+/* 회전하는 텍스트 */
+.circle_text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -200px;
+    left: -150px;
+    z-index: 1;
+}
 
+.circle_text svg {
+    height: 620px;
+}
+
+.circle_text svg text {
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    fill: var(--text-color2);
+}
+
+/* 슬라이드 박스*/
 .slider_Container {
     width: 100%;
     height: 100%;
@@ -78,6 +106,7 @@ nav a:hover {
     height: 100%;
 }
 
+/* 첫번째 슬라이드*/
 .slide_first_section{
     width: 100%;
     height: 100%;
@@ -120,8 +149,7 @@ nav a:hover {
 }
 
 
-/* 랜덤하게 바뀌는 글 letter 박스 */
-
+/* 글자 박스 */
 .letter_box{
     width: 100%;
     height: 50px;
@@ -136,8 +164,8 @@ nav a:hover {
     font-size: 40px;
 }
 
-/* 여기까지가 슬라이드 박스 1번 */
 
+/* 두번째 슬라이드 */
 .slide_coffee{
     width: 100%;
     height: 800px;
@@ -155,8 +183,8 @@ nav a:hover {
     transform: translate(-50%, -50%);
 }
 
-/* 여기까지가 슬라이드 박스 2번 */
 
+/* 세번째 슬라이드 */
 .slide_Cup {
     width: 100%;
     height: 800px;
@@ -208,8 +236,8 @@ nav a:hover {
     animation: pullCoffee 1s 2.5s ease-in-out forwards;
 }
 
-/* 여기까지가 슬라이드 박스 3번 */
-    
+
+/* 슬라이드 박스 좌우 버튼 */
 .prev,
 .next {
     cursor: pointer;
@@ -237,11 +265,7 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.slide_Number {
-    position: absolute;
-    top: 0;
-}
-
+/* 슬라이드 점 버튼 */
 .dot_box{
     position: absolute;
     bottom: 20px;
@@ -265,37 +289,11 @@ nav a:hover {
     background-color: var(--block-color);
 }
 
+/* 슬라이드 박스 페이드 효과 */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
-/* 슬라이드 박스의 큰요소들 버튼, 사라짐, dot */
-
-.circle_text{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -200px;
-    left: -150px;
-    z-index: 1;
-}
-
-.circle_text svg {
-    height: 620px;
-}
-
-.circle_text svg text{
-    font-size: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 20px;
-    fill: var(--text-color2);
-}
-
-/* 돌아가는 텍스트 글자 */
 
 @keyframes fade {
     from {
@@ -307,8 +305,7 @@ nav a:hover {
     }
 }
 
-/* 슬라이드 박스의 사라지는 효과 */
-
+/* 슬라이드 박스3 애니메이션 */
 @keyframes pullDown {
     0% {
         transform: translate(-50%, -800px);
@@ -369,9 +366,8 @@ nav a:hover {
     }
 }
 
-/* 3번째 슬라이드 박스의 애니메이션들 */
 
-
+/* 미디어쿼리*/
 @media all and (max-width: 740px)
 and (max-width: 786px)
 and (max-width: 844px) {
@@ -432,5 +428,3 @@ and (max-width: 844px) {
         display: none;
     }
 }
-
-/* 미디어 쿼리*/

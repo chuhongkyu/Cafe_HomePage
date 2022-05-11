@@ -7,9 +7,8 @@
     <title>마포구 이쁜 카페</title>
 
     <link rel="icon" href="img/favicon/favicon.png" />  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
@@ -20,31 +19,29 @@
 
     <script defer type="text/javascript" src="js/index.js"></script>
     <script defer type="text/javascript" src="js/map.js"></script>
-    <script defer type="text/javascript" src="js/letter.js"></script>
-    <script defer type="text/javascript" src="js/findHashtag.js"></script>
+
     <script src="https://kit.fontawesome.com/bf3a224d0a.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
-    <!-- 4월 07일 인스타 감성 충만 카페 제작 시작 이쁜 카페로 변경 -->
-    <!-- 화이팅-->
-
+    <!-- 오프닝 -->
     <div class="opening">
         <div class="coffee">
             <div class='wave'></div>
             <div class='wave'></div>
             <div class='wave'></div>
-            <img src="img/MaopGo2.svg" alt="#">
+            <img src="img/Mapologo/white_M.svg" alt="#">
         </div>
     </div>
 
-    <!-- this is opening -->
-
+    <!-- 해더 (로고, 슬라이드박스) -->
     <header id="logo">
+        <!-- 로고  -->
         <div class="log_container">
             <div class="log_box">
                 <img src="img/coffee_medal.png" alt="#">
-            </div>     
+            </div>
+            <!-- 내비 버튼  -->
             <nav>
                 <a href="#logo">HOME</a>
                 <a href="#hash">HASHTAG</a>
@@ -52,8 +49,8 @@
                 <a href="#footer">CONACT</a>
             </nav>
         </div>
-        <!-- 여기까지가 로고 컨테이너다. -->
 
+        <!-- 회전 글자  -->
         <div class="circle_text">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
                 <defs>
@@ -74,11 +71,11 @@
                 </text>
             </svg>
         </div>
-
-        <!-- 돌아가는 텍스트-->
+        <!-- 로고 End-->
 
 
         <div class="slider_Container">
+
             <div class="slide_Box fade">
                 <div class="slide_first_section">
                     <div class="slide_first_section_text">
@@ -127,10 +124,9 @@
         <!-- 여기까지가 슬라이더 컨테이너다. -->
     </header>
 
-    <!-- 내 header는 logo_cotainer와 slider_Container로 이루어졌다. -->
-
+    <!-- 메인 콘테이너(해쉬태그박스, 그리드) -->
     <section class="main_container">
-
+        <!-- 해쉬태그 버튼 -->
         <div id="hash" class="hashtag_box">
             <div class="hashtag_line_1">
                 <span class="hashtag_btn" onclick="findHashtag('mapo', this)">#마포구</span>
@@ -152,8 +148,9 @@
             </div>
         </div>
 
+        <!-- 카페 콘텐츠들-->
         <div class="gird_article_container">
-            <!-- 요소들 -->
+            <!-- 카페 콘텐츠-->
             <div class="article_contents mapo concent insta-feel">
                 <div class="article_img"></div>
                 <div class="article_box">
@@ -293,7 +290,6 @@
                     <div class="article_box_btn">
                         <div class="hashtag_line_2">
                             <span class="hashtag_content_btn"><i class="fa-solid fa-camera"></i>&nbsp;찰칵!</span>
-                            <span class="hashtag_content_btn">#💑</span>
                             <span class="hashtag_content_btn">#커피</span>
                             <span class="hashtag_content_btn">#마포구</span>
                             <span class="hashtag_content_btn">#아기자기한</span>
@@ -306,7 +302,7 @@
                 <span class="safe_icon"></span>
             </div>
 
-            <div class="article_contents mapo big goods">
+            <div class="article_contents mapo big goods insta-feel">
                 <div class="article_img"></div>
                 <div class="article_box">
                     <h5>스타벅스-망원한강</h5>
@@ -373,32 +369,40 @@
                 <span class="safe_icon"></span>
             </div>
 
+            <!-- 카페 콘텐츠 디폴트-->
             <div class="article_contents default study">
                 <div>
-                    <img src="img/coffe_01.png" alt="">
+                    <img src="img/cafe/default.png" alt="default">
                 </div>
             </div>
 
-
+            <div class="article_contents default study">
+                <div>
+                    <img src="img/cafe/default.png" alt="default">
+                </div>
+            </div>
         </div>
-
+        <!-- 카페 콘텐츠들 END-->
     </section>
 
-    <!-- main_container는 해시테그 박스와 그리형식 기사 컨테이너로 만들었다. -->
-
+    <!-- 카페 지도 -->
     <section class="map_container">
         <h1>카페 위치</h1>
+        <!-- 지도 박스 -->
         <div class="map_wrap">
+            <!-- 지도, 지도확대버튼 -->
             <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;">
                 <div class="map_expand_btns">
                     <span onclick="zoomIn()"><i class="fa-solid fa-plus"></i></span>
                     <span onclick="zoomOut()"><i class="fa-solid fa-minus"></i></span>
                 </div> 
             </div>
-        <!-- 실제 지도와 확대 버튼  -->
+
+            <!-- 지도 메뉴 창 -->
             <div id="menu_wrap">
                 <div class="option">
                     <div>
+                        <!-- 카페 선택 창 -->
                         <form onsubmit="searchPlaces(); return false;">
                             <select name="cafe" id="cafe_selecter">
                                 <option value="마포구 카페" selected>마포구 카페</option>
@@ -420,22 +424,23 @@
                 <ul id="placesList"></ul>
                 <div id="pagination"></div>
             </div>
-        <!-- 메뉴 창 -->
 
         </div>
     </section>
-
-    <!-- 맵 컨테이너 -->
-
+    
+    <!-- Sns, 연락처 -->
     <footer id="footer">
+        <!-- sns 박스 -->
         <div class="sns_box">
-            <a href="https://www.facebook.com/mapoguoffice" target="_blank"><img class="facebook" src="img/footerSns/icons8-facebook.svg" alt="#"></a>
-            <a href="https://www.instagram.com/accounts/login/?next=/mapogu_official/" target="_blank"><img src="img/footerSns/icons8-인스-타-그램 (2).svg" alt="#"></a>
-            <a href="https://twitter.com/prmapo" target="_blank"><img class="twiter" src="img/footerSns/icons8-지저귀다.svg" alt="#"></a>
+            <a href="https://www.facebook.com/mapoguoffice" target="_blank"><img class="facebook" src="img/footerSns/f.svg" alt="#"></a>
+            <a href="https://www.instagram.com/accounts/login/?next=/mapogu_official/" target="_blank"><img src="img/footerSns/i.svg" alt="#"></a>
+            <a href="https://twitter.com/prmapo" target="_blank"><img class="twiter" src="img/footerSns/t.svg" alt="#"></a>
         </div>
+
+        <!-- 정보 박스 -->
         <div class="footer_box">
             <div class="footer_logo_box">
-                <a href="https://www.mapo.go.kr/site/main/home" target="_blank"><img style="width: 150px; height: 50px;" src="img/MaopGo.svg" alt="#"></a>
+                <a href="https://www.mapo.go.kr/site/main/home" target="_blank"><img style="width: 150px; height: 50px;" src="img/Mapologo/coffee_M.svg" alt="#"></a>
                 <h5 style="text-align: end;">마포구</h5>
             </div>
             <div class="footer_logo_box">
@@ -449,8 +454,6 @@
         </div>
 
     </footer>
-
-    <!-- 이것은 Footer 다 -->
 
 </body>
 </html>

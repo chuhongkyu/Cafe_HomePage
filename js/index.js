@@ -1,10 +1,4 @@
-// 슬라이드 박스 움직이기
-// 1.슬라이드 마다 Index를 주고 초기값은 1이다.
-// 2.플러스 슬라이드를 하면 Index에서 +1한다.
-// 3.마이너스 슬라이드 하면 Index에서 -1한다.
-// 4. index가 0보다 작아지면 다시 박스의 랭스(즉 3)으로 바뀐다.
-// 5. index가 아닌것들은 다 안보여진다.
-// 6. dot은 누르면 "active"된다.
+// 슬라이드 박스
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -38,5 +32,40 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-// 
+// 랜덤 레터박스
 
+// 글자 박스, 글자 배열
+const LetterArr =["시원한 커피 한잔의 여유", "음악은 흐르고 커피물은 끓는다.", "행복은 한잔의 커피에서도 문득 찾아옵니다."];
+const letterBox = document.getElementById("nice_letter");
+
+// 랜덤 하게 숫자 생성후 래터박스 배열에 담아 함수 호출
+function makeNiceLetter(){
+    let random = Math.floor(Math.random()*LetterArr.length);
+    letterBox.innerHTML = LetterArr[random];
+}
+
+makeNiceLetter();
+
+
+// 버튼 클릭시 리스트 안에서 특정 해쉬태그(class)를 찾는 함수
+
+const hashTagList = document.querySelectorAll(".article_contents");
+const hashBtn = document.querySelectorAll(".hashtag_btn");
+
+function findHashtag(hash, item){
+    //반복문으로 hashBtn의 클래스를 제거 
+    for (let j = 0; j < hashBtn.length; j++) {
+        hashBtn[j].classList.remove("hashtag_click");
+    }
+    
+    // 리스트 안에서 특정 해쉬태그(class)를 찾는 함수
+    for (let i = 0; i < hashTagList.length; i++) {
+       if(hashTagList[i].classList.contains(hash) === true){
+           hashTagList[i].style.display = 'flex';
+       }else{
+           hashTagList[i].style.display = 'none';
+       }
+    }
+    //item에 클래스를 추가 
+    item.classList.add("hashtag_click");
+}

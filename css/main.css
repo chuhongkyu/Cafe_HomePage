@@ -1,3 +1,7 @@
+/* 
+*메인 컨테이너 
+*/
+
 .main_container{
     width: 100%;
     background-color: var(--bg-color);
@@ -6,8 +10,7 @@
     padding: 0px 100px;
 }
 
-/* 메인 컨테이너 */
-
+/* 해쉬태그 박스 */
 .hashtag_box{
     width: 100%;
     padding: 50px 20px;
@@ -53,8 +56,8 @@
     background-position:left bottom;
 }
 
-/* 해쉬태그 박스 끝 */
 
+/* 카페 콘텐츠 박스 */
 .gird_article_container{
     width: 100%;
     display: grid;
@@ -64,6 +67,8 @@
     gap: 50px;
 }
 
+
+/* 카페 콘텐츠 */
 .article_contents{
     grid-column: span 1;
     width: 100%;
@@ -136,37 +141,35 @@
 }
 
 .article_contents:nth-child(1){
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/Debunk/DEBUNK_04.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/01.jpg);
 }
 .article_contents:nth-child(2) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/인솔커피.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/02.jpg);
 }
 .article_contents:nth-child(3) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/fourbasic/포비베이직.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/03.jpg);
 }
 .article_contents:nth-child(4) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/beanBrother/빈브라더스_20140807_09.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/04.jpg);
 }
 .article_contents:nth-child(5) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafeendA/커피앤드에이.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/05.jpg);
 }
 .article_contents:nth-child(6) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/bamboo/바부.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/06.jpg);
 }
 .article_contents:nth-child(7) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/congCafe/cong_cafe.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/07.jpg);
 }
 .article_contents:nth-child(8) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/starbuck.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/08.jpg);
 }
 .article_contents:nth-child(9) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/프릳츠.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/09.jpg);
 }
 .article_contents:nth-child(10) {
-    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe꼼마.jpg);
+    background-image: linear-gradient(30deg, var(--block-color) 1%, rgba(255, 255, 255, 0) 99%), url(../img/cafe/10.jpg);
 }
-
-
 
 .article_box h5{
     width: 100%;
@@ -235,9 +238,7 @@
     transition: 0.5s;
 }
 
-
-/* 힘들었던 그리드 카페 소개 컨텐츠  끝 */
-
+/*미디어 쿼리*/
 @media all and (max-width: 740px) and (max-width: 786px) and (max-width: 844px) {
     .main_container {
         padding: 0px 20px;
@@ -277,6 +278,4 @@
     }
     
 }
-
-/* 미디어 커리 */
 

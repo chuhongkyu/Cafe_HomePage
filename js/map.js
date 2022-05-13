@@ -1,7 +1,4 @@
-// 기본 카카오 API 지도
-// 카카오 api 지도를 불러온다.
-// 지도는 지도 자체와 메뉴로 구성됨
-// input에 value를 통해 카페를 검색
+// 카페 셀렉터 지도
 
 
 let markers = [];
@@ -12,13 +9,15 @@ let mapContainer = document.getElementById('map'),
         draggable: false,
         level: 3 
     };
+
+
+
 // 지도를 생성
-
 let map = new kakao.maps.Map(mapContainer, mapOption);
-// 장소 검색 객체를 생성
 
+// 장소 검색 객체를 생성
 let ps = new kakao.maps.services.Places();
-// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성
+
 
 let infowindow = new kakao.maps.InfoWindow({zIndex: 1});
 
@@ -26,27 +25,23 @@ searchPlaces();  // 키워드 검색을 요청하는 함수
 
 function searchPlaces() {
     let keyword = document.getElementById("cafe_selecter").value; 
-        //----------카페 셀렉터 input 가져오기--------------------------
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
         return false;
-        //**공백제거 */
+        
     }
 
     // 장소검색 객체를 통해 키워드로 장소검색을 요청
     ps.keywordSearch(keyword, placesSearchCB);
 }
 
-// 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
 
+// 장소검색이 완료됐을 때 호출되는 콜백함수
 function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
 
-        // 정상적으로 검색이 완료됐으면 검색 목록과 마커를 표출합니다
         displayPlaces(data);
-
-        // 페이지 번호를 표출합니다
         displayPagination(pagination);
 
     } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
@@ -80,13 +75,11 @@ function displayPlaces(places) {
         // 마커를 생성하고 지도에 표시.
         let placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
             marker = addMarker(placePosition, i),
-            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
+            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성
 
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해 LatLngBounds 객체에 좌표를 추가합니다
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해 LatLngBounds 객체에 좌표를 추가
         bounds.extend(placePosition);
 
-        // 마커와 검색결과 항목에 mouseover 했을때 해당 장소에 인포윈도우에 장소명을 표시합니다 mouseout 했을 때는 인포윈도우를
-        // 닫습니다
         (function (marker, title) {
             kakao.maps.event.addListener(marker, 'mouseover', 
             function () {
@@ -111,19 +104,18 @@ function displayPlaces(places) {
         fragment.appendChild(itemEl);
     }
 
-    // 검색결과 항목들을 검색결과 목록 Element에 추가합니다
+    // 검색결과 항목들을 검색결과 목록 Element에 추가
     listEl.appendChild(fragment);
     menuEl.scrollTop = 0;
 
-    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+    // 검색된 장소 위치를 기준으로 지도 범위를 재설정
     map.setBounds(bounds);
 }
 
-// 검색결과 항목을 Element로 반환하는 함수입니다
+// 검색결과 항목을 Element로 반환하는 함수
 function getListItem(index, places) {
     let el = document.createElement('li'),
         itemStr = `<span class="markerBg marker_${index + 1}"></span><div class="info"><h5>${places.place_name}</h5>`;
-        //여기서 div를 염
 
     if (places.road_address_name) {
         itemStr += `<span>${places.road_address_name}</span><span class="jibun gray">${places.address_name}</span>`
@@ -133,8 +125,7 @@ function getListItem(index, places) {
     }
 
     itemStr += `<span class="tel">${places.phone}</span></div>`;
-    //--여기서 div를 닫음 --
-    //--지번이 있다면 지번 번호. 아니면 번호만 --
+    
 
     el.innerHTML = itemStr;
     el.className = 'item';
@@ -143,9 +134,9 @@ function getListItem(index, places) {
 }
 
 
-// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
+// 마커를 생성하고 지도 위에 마커를 표시하는 함수
 function addMarker(position, idx) {
-    let imageSrc = './img/coffee_mark.png', //---- Coffee 스티커 모양으로 사용 아래는 크기 설정
+    let imageSrc = './img/coffee_mark.png', 
         imageSize = new kakao.maps
                 .Size(36, 37), // 마커 이미지의 크기
         imgOptions = {
@@ -165,13 +156,13 @@ function addMarker(position, idx) {
                 image: markerImage
             });
 
-    marker.setMap(map); // 지도 위에 마커를 표출합니다
-    markers.push(marker); // 배열에 생성된 마커를 추가합니다
+    marker.setMap(map); // 지도 위에 마커를 표출
+    markers.push(marker); // 배열에 생성된 마커를 추가
 
     return marker;
 }
 
-// 지도 위에 표시되고 있는 마커를 모두 제거합니다
+// 지도 위에 표시되고 있는 마커를 모두 제거
 function removeMarker() {
     for (let i = 0; i < markers.length; i++) {
         markers[i].setMap(null);
@@ -179,13 +170,13 @@ function removeMarker() {
     markers = [];
 }
 
-// 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
+// 검색결과 목록 하단에 페이지번호를 표시는 함수
 function displayPagination(pagination) {
     let paginationEl = document.getElementById('pagination'),
         fragment = document.createDocumentFragment(),
         i;
 
-    // 기존에 추가된 페이지번호를 삭제합니다
+    // 기존에 추가된 페이지번호를 삭제
     while (paginationEl.hasChildNodes()) {
         paginationEl.removeChild(paginationEl.lastChild);
     }
@@ -210,7 +201,7 @@ function displayPagination(pagination) {
     paginationEl.appendChild(fragment);
 }
 
-// 인포윈도우에 장소명을 표시합니다
+// 인포윈도우에 장소명을 표시
 function displayInfowindow(marker, title) {
     let content = `<div class="content_style">${title}</div>`; //** content_style로 이름을 적어 인포 윈도우에 표시
 
@@ -218,13 +209,14 @@ function displayInfowindow(marker, title) {
     infowindow.open(map, marker);
 }
 
-// 검색결과 목록의 자식 Element를 제거하는 함수입니다
+// 검색결과 목록의 자식 Element를 제거하는 함수
 function removeAllChildNods(el) {
     while (el.hasChildNodes()) {
         el.removeChild(el.lastChild);
     }
 }
 
+// 확대 버튼 
 function zoomIn() {
     map.setLevel(map.getLevel() - 1);
 }
@@ -232,5 +224,3 @@ function zoomIn() {
 function zoomOut() {
     map.setLevel(map.getLevel() + 1);
 }
-
-// 확대 버튼 능력

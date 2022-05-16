@@ -27,15 +27,27 @@ a{
 }
 
 /* 디자인 색깔 */
-:root {
+:root[color-theme='light'] {
     --text-color: black;
     --bg-color: white;
     --root-color: #fcf4e3;
     --block-color: #dec28c;
     --bean-color: #7B554A;
     --text-color2: #dec28c;
+    --cloud-color: #7B554A;
+    --letter-color: rgb(104, 103, 103);
 }
 
+:root[color-theme='dark'] {
+    --text-color: black;
+    --bg-color: #dec28c;
+    --root-color: #3c717e;
+    --block-color: #fcf4e3;
+    --bean-color: white;
+    --text-color2: #dec28c;
+    --cloud-color: white;
+    --letter-color: white;
+}
 
 /*
 오프닝
@@ -64,8 +76,6 @@ a{
     background-color: var(--block-color);
     overflow: hidden;
     position: relative;
-    transform: translate3d(0, 0, 0);
-    box-shadow: 0 2px 30px rgba(black, .2);
     border-radius: 50%;
 }
 
@@ -116,12 +126,110 @@ a{
     background: var(--bean-color);
 }
 
+#super_nav {
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.super_nav_root{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: var(--block-color);
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid var(--root-color);
+    animation: superNavAni 1s ease-in-out infinite;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.super_nav_root .wave {
+    opacity: 0.4;
+    position: absolute;
+    background: var(--root-color);
+    width: 50px;
+    height: 60px;
+    margin-left: -25px;
+    margin-top: -25px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: waterWave 3s linear infinite;
+}
+
+.super_nav_root .wave:nth-of-type(3) {
+    animation: waterWave 5s linear infinite;
+}
+
+.super_nav_root .wave:nth-of-type(2) {
+    animation: waterWave 7s linear infinite;
+    opacity: 0.1;
+    background: var(--bean-color);
+}
+
+.super_nav_panel{
+    position: absolute;
+    display: none;
+    bottom: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    z-index: 5px;
+    transition: 0.5s;
+}
+
+.super_nav_panel span{
+    width: 50px;
+    height: 50px;
+    background-color: var(--block-color);
+    border-radius: 50%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.up_nav:hover{
+    background-color: var(--bean-color);
+    color: var(--bg-color);
+    transition: 0.5s;
+}
+
+.up_nav{
+    margin-left: 50px;
+}
+
+.dark_nav:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transition: 0.5s;
+}
+
 @keyframes waterWave {
-    from {
+    to {
         transform: rotate(0deg);
     }
 
     from {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes superNavAni {
+    0% {
+        border: 1px solid var(--root-color);
+    }
+
+    from {
+        border: 5px solid var(--root-color);
     }
 }

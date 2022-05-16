@@ -69,3 +69,34 @@ function findHashtag(hash, item){
     //item에 클래스를 추가 
     item.classList.add("hashtag_click");
 }
+
+const SuperNav = document.getElementById("super_nav");
+const SuperNavBar = document.querySelector(".super_nav_panel");
+const SuperNavRoot = document.querySelector(".super_nav_root");
+
+SuperNav.addEventListener("mouseover", showSuperNav)
+SuperNav.addEventListener("mouseout", hideSuperNav)
+
+function showSuperNav(){
+    SuperNavBar.style.display = "block"
+    SuperNavRoot.style.border = "5px solid var(--root-color)"
+}
+
+function hideSuperNav(){
+    SuperNavBar.style.display = "none"
+    SuperNavRoot.style.border = "1px solid var(--root-color)"
+}
+
+const DarkModeBtn = document.querySelector(".dark_nav");
+let onOff = true;
+handleTheme();
+DarkModeBtn.addEventListener('click', handleTheme);
+function handleTheme(){
+    onOff = !onOff;
+    if( onOff == true ){
+        document.documentElement.setAttribute('color-theme', 'dark');
+        } else {
+        
+          document.documentElement.setAttribute('color-theme', 'light');
+        }
+}

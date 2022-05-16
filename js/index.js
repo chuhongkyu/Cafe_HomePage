@@ -111,6 +111,7 @@ function handleTheme(){
         DarkModeImg.classList.add("dark_img");
         logoMark.src = "./img/coffee_medal2.png";
         logoMarkContainer.classList.add("log_rotate");
+
         for (let i = 0; i < AllMedal.length; i++) {
             AllMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
             AllMedal[i].classList.add("log_rotate");
@@ -122,6 +123,7 @@ function handleTheme(){
         DarkModeImg.classList.remove("dark_img");
         logoMark.src = "./img/coffee_medal.png";
         logoMarkContainer.classList.remove("log_rotate");
+        
         for (let i = 0; i < AllMedal.length; i++) {
             AllMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
             AllMedal[i].classList.remove("log_rotate");

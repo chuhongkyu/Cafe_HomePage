@@ -70,7 +70,7 @@ footer{
 }
 
 /* 미디어 쿼리 */
-@media all and (max-width: 740px) {
+@media all and (max-width: 768px) {
     .sns_box{
         transform: scale(0.8);
     }
@@ -85,6 +85,12 @@ footer{
         display: none;
     }
     .footer_logo_box h4{
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer_logo_box p {
         font-size: 11px;
     }
 }

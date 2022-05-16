@@ -368,9 +368,10 @@ header {
 
 
 /* 미디어쿼리*/
-@media all and (max-width: 740px)
-and (max-width: 786px)
-and (max-width: 844px) {
+@media all and (max-width: 768px) {
+    header {
+        height: 600px;
+    }
     .log_container {
         padding: 5px;
     }
@@ -383,13 +384,10 @@ and (max-width: 844px) {
     .circle_text{
         left: -300px;
     }
-    header{
-        height: 600px;
-    }
-    svg{
+    .circle_text svg{
         height: 550px;
     }
-    svg text{
+    .circle_text svg text{
         font-size: 30px;
     }
     .log_box img{
@@ -426,5 +424,39 @@ and (max-width: 844px) {
     }
     .event {
         display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .log_box img {
+        top: 10px;
+        left: -55px;
+        transform: rotateZ(20deg) scale(1.2);
+    }
+    .circle_text {
+        left: -260px;
+    }
+    .slide_first_section_text{
+        width: 100%;
+        align-items: center;
+    }
+    .slide_first_section_text h1:first-of-type {
+        font-size: 140px;
+        line-height: 100px;
+    }
+    .slide_first_section_text h1 {
+        font-size: 100px;
+    }
+    .slide_first_section_img,
+    .event {
+        display: none;
+    }
+    .letter_box {
+        color: var(--text-color2);
+        font-size: 30px;
+        align-items: center;
+    }
+    .log_container{
+        padding: 0px 50px
     }
 }

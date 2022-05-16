@@ -240,7 +240,7 @@
 }
 
 /*미디어 쿼리*/
-@media all and (max-width: 740px) and (max-width: 786px) and (max-width: 844px) {
+@media all and (max-width: 768px){
     .main_container {
         padding: 0px 20px;
     }
@@ -260,6 +260,7 @@
     .hashtag_content_btn{
         font-size: 10px;
     }
+
     .hashtag_btn{
         font-size: 10px;
     }
@@ -283,6 +284,10 @@
     .default{
         display: none;
     }
-    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .default {
+         display: none;
+    }
 }
 

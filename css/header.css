@@ -308,6 +308,11 @@ header {
     transition: 0.5s;
 }
 
+.log_rotate{
+    transform: scaleX(-1);
+    transition: 0.5s;
+}
+
 @keyframes fade {
     from {
         opacity: 0.4

@@ -116,6 +116,7 @@
     word-break: keep-all;
     overflow-wrap: break-word;
     background-color: var(--content-color);
+    transition: 0.5s;
 }
 
 .default{

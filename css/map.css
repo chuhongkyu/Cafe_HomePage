@@ -70,6 +70,7 @@
     cursor: pointer;
     transition: 0.5s;
     font-weight: 800;
+    color: var(--text-color);
 }
 
 .map_expand_btns span:hover {

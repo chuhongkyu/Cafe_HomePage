@@ -95,6 +95,10 @@ function hideSuperNav(){
 const DarkModeBtn = document.querySelector(".dark_nav");
 const DarkModeContainer = document.querySelector(".slider_Container");
 const DarkModeImg = document.querySelector(".event");
+const logoMark = document.querySelector(".log_box img");
+const logoMarkContainer = document.querySelector(".log_box");
+const AllMedal = document.querySelectorAll(".safe_icon");
+
 let onOff = true;
 handleTheme();
 DarkModeBtn.addEventListener('click', handleTheme);
@@ -105,9 +109,22 @@ function handleTheme(){
         document.documentElement.setAttribute('color-theme', 'dark');
         DarkModeContainer.classList.add("slider_darkMode");
         DarkModeImg.classList.add("dark_img");
+        logoMark.src = "./img/coffee_medal2.png";
+        logoMarkContainer.classList.add("log_rotate");
+        for (let i = 0; i < AllMedal.length; i++) {
+            AllMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
+            AllMedal[i].classList.add("log_rotate");
+        }
+        
         } else {
         document.documentElement.setAttribute('color-theme', 'light');
         DarkModeContainer.classList.remove("slider_darkMode");
         DarkModeImg.classList.remove("dark_img");
+        logoMark.src = "./img/coffee_medal.png";
+        logoMarkContainer.classList.remove("log_rotate");
+        for (let i = 0; i < AllMedal.length; i++) {
+            AllMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
+            AllMedal[i].classList.remove("log_rotate");
+        }
         }
 }

@@ -115,7 +115,7 @@
     position: relative;
     word-break: keep-all;
     overflow-wrap: break-word;
-    background-color: var(--bg-color);
+    background-color: var(--content-color);
 }
 
 .default{

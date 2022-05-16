@@ -70,6 +70,10 @@ function findHashtag(hash, item){
     item.classList.add("hashtag_click");
 }
 
+// 
+// 화면 고정 네비게이션
+// 
+
 const SuperNav = document.getElementById("super_nav");
 const SuperNavBar = document.querySelector(".super_nav_panel");
 const SuperNavRoot = document.querySelector(".super_nav_root");
@@ -87,16 +91,23 @@ function hideSuperNav(){
     SuperNavRoot.style.border = "1px solid var(--root-color)"
 }
 
+// 다크모드 버튼
 const DarkModeBtn = document.querySelector(".dark_nav");
+const DarkModeContainer = document.querySelector(".slider_Container");
+const DarkModeImg = document.querySelector(".event");
 let onOff = true;
 handleTheme();
 DarkModeBtn.addEventListener('click', handleTheme);
+
 function handleTheme(){
     onOff = !onOff;
     if( onOff == true ){
         document.documentElement.setAttribute('color-theme', 'dark');
+        DarkModeContainer.classList.add("slider_darkMode");
+        DarkModeImg.classList.add("dark_img");
         } else {
-        
-          document.documentElement.setAttribute('color-theme', 'light');
+        document.documentElement.setAttribute('color-theme', 'light');
+        DarkModeContainer.classList.remove("slider_darkMode");
+        DarkModeImg.classList.remove("dark_img");
         }
 }

@@ -294,6 +294,20 @@ header {
     animation-duration: 1.5s;
 }
 
+/* 다크모드 */
+.dark_img{
+    transform: scaleY(-1);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.slider_darkMode {
+    background-image: url(../img/map_container.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
 @keyframes fade {
     from {
         opacity: 0.4

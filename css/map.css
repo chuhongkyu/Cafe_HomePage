@@ -108,7 +108,7 @@
 }
 
 #menu_wrap::-webkit-scrollbar-thumb {
-    background-color: var(--block-color);
+    background-color: var(--text-color2);
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px rgb(124, 124, 124);
 }
@@ -144,6 +144,7 @@
 
 #placesList .item .info {
     padding: 10px 0 10px 55px;
+    color: var(--text-color);
 }
 
 #placesList .info .gray {
@@ -250,8 +251,8 @@
     width: 80%;
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--block-color);
-    color: white;
+    background-color: var(--text-color2);
+    color: var(--bg-color);
     border: none;
 }
 
@@ -271,7 +272,7 @@
 
 .option button:hover{
     color: white;
-    background-color: var(--block-color);
+    background-color: var(--text-color2);
     transition: 0.5s;
 }
 

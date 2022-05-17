@@ -313,6 +313,7 @@ header {
     transition: 0.5s;
 }
 
+/* 슬라이드 박스 페이드 인/아웃 */
 @keyframes fade {
     from {
         opacity: 0.4
@@ -393,7 +394,7 @@ header {
     .log_container {
         padding: 5px;
     }
-    nav {
+    .log_container nav {
         display: none;
     }
     .log_box h1 {

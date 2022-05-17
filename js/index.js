@@ -1,4 +1,6 @@
+//
 // 슬라이드 박스
+//
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -32,7 +34,10 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
+//
 // 랜덤 레터박스
+//
+
 
 // 글자 박스, 글자 배열
 const LetterArr =["시원한 커피 한잔의 여유", "음악은 흐르고 커피물은 끓는다.", "행복은 한잔의 커피에서도 문득 찾아옵니다."];
@@ -48,7 +53,6 @@ makeNiceLetter();
 
 
 // 버튼 클릭시 리스트 안에서 특정 해쉬태그(class)를 찾는 함수
-
 const hashTagList = document.querySelectorAll(".article_contents");
 const hashBtn = document.querySelectorAll(".hashtag_btn");
 
@@ -91,7 +95,10 @@ function hideSuperNav(){
     SuperNavRoot.style.border = "1px solid var(--root-color)"
 }
 
+//
 // 다크모드 버튼
+//
+
 const DarkModeBtn = document.querySelector(".dark_nav");
 const DarkModeContainer = document.querySelector(".slider_Container");
 const DarkModeImg = document.querySelector(".event");
@@ -116,8 +123,8 @@ function handleTheme(){
             AllMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
             AllMedal[i].classList.add("log_rotate");
         }
-        
-        } else {
+    }
+    else {
         document.documentElement.setAttribute('color-theme', 'light');
         DarkModeContainer.classList.remove("slider_darkMode");
         DarkModeImg.classList.remove("dark_img");
@@ -128,5 +135,5 @@ function handleTheme(){
             AllMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
             AllMedal[i].classList.remove("log_rotate");
         }
-        }
+    }
 }

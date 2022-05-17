@@ -1,5 +1,6 @@
+//
 // 카페 셀렉터 지도
-
+//
 
 let markers = [];
 
@@ -21,8 +22,9 @@ let ps = new kakao.maps.services.Places();
 
 let infowindow = new kakao.maps.InfoWindow({zIndex: 1});
 
-searchPlaces();  // 키워드 검색을 요청하는 함수
+searchPlaces();
 
+// 키워드 검색을 요청하는 함수
 function searchPlaces() {
     let keyword = document.getElementById("cafe_selecter").value; 
 

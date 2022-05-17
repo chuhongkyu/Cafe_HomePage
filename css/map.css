@@ -110,8 +110,6 @@
 
 #menu_wrap::-webkit-scrollbar-thumb {
     background-color: var(--text-color2);
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 5px rgb(124, 124, 124);
 }
 
 #menu_wrap::-webkit-scrollbar-track {

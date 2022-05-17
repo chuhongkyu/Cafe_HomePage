@@ -85,20 +85,23 @@ const SuperNavRoot = document.querySelector(".super_nav_root");
 SuperNav.addEventListener("mouseover", showSuperNav)
 SuperNav.addEventListener("mouseout", hideSuperNav)
 
+// 네비게이션을 보여주는 함수
 function showSuperNav(){
     SuperNavBar.style.display = "block"
     SuperNavRoot.style.border = "5px solid var(--root-color)"
 }
 
+// 네비게이션을 감춰주는 함수
 function hideSuperNav(){
     SuperNavBar.style.display = "none"
     SuperNavRoot.style.border = "1px solid var(--root-color)"
 }
 
 //
-// 다크모드 버튼
+// 다크모드
 //
 
+// 다크모드 요소
 const DarkModeBtn = document.querySelector(".dark_nav");
 const DarkModeContainer = document.querySelector(".slider_Container");
 const DarkModeImg = document.querySelector(".event");
@@ -110,6 +113,8 @@ let onOff = true;
 handleTheme();
 DarkModeBtn.addEventListener('click', handleTheme);
 
+
+// boolean을 이용하여 변경하는 함수
 function handleTheme(){
     onOff = !onOff;
     if( onOff == true ){

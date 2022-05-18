@@ -2,12 +2,11 @@
  * 테마, 좋은글 만들기 함수 onload
  */
 
-//다크모드 onOFF 변수
-let onOff = true;
+let stateDark;
+
 // 테마와 랜덤을 정해주는 함수를 먼저 호출
 window.onload= function(){
     makeNiceLetter();
-    handleTheme();
 }
 
 /**
@@ -121,8 +120,8 @@ darkModeBtn.addEventListener('click', handleTheme);
 
 // 변수를 이용한 다크모드 제어 함수
 function handleTheme(){
-    onOff = !onOff;
-    if( onOff ){
+    stateDark = !stateDark
+    if( stateDark == true){
         document.documentElement.className = 'dark';
         darkModeContainer.classList.add("slider_darkMode");
         darkModeImg.classList.add("dark_img");
@@ -147,3 +146,4 @@ function handleTheme(){
         }
     }
 }
+

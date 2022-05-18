@@ -2,9 +2,11 @@
  * 테마, 좋은글 만들기 함수 onload
  */
 
-window.onload = function(){
-    handleTheme();
+let onOff = true;
+
+window.onload= function(){
     makeNiceLetter();
+    handleTheme();
 }
 
 /**
@@ -56,7 +58,6 @@ function makeNiceLetter(){
     let random = Math.floor(Math.random()*letterArr.length);
     letterBox.innerHTML = letterArr[random];
 }
-
 
 // 버튼 클릭시 리스트 안에서 특정 해쉬태그(class)를 찾는 함수
 const hashTagList = document.querySelectorAll(".article_contents");
@@ -115,11 +116,10 @@ const logoMark = document.querySelector(".log_box img"); // 다크모드시 바�
 const logoMarkContainer = document.querySelector(".log_box"); // 다크모드시 회전하는 로고 박스
 const allMedal = document.querySelectorAll(".safe_icon"); // 다크모드시 바뀌는 로고 이미지2
 
-let onOff = true;
 darkModeBtn.addEventListener('click', handleTheme);
 
 // 변수를 이용한 다크모드 제어 함수
-function handleTheme(){
+async function handleTheme(){
     onOff = !onOff;
     if( onOff ){
         document.documentElement.setAttribute('color-theme', 'dark');

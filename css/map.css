@@ -260,26 +260,10 @@
     width: 100%;
 }
 
-.option button{
-    width: 20%;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--root-color);
-    color: black;
-    border: none;
-    cursor: pointer;
-}
-
-.option button:hover{
-    color: white;
-    background-color: var(--text-color2);
-    transition: 0.5s;
-}
-
 .option form{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid black;
     padding: 0px 5px 5px 5px;

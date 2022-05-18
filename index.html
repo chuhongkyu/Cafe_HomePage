@@ -370,7 +370,7 @@
                 <div class="option">
                     <div>
                         <!-- 카페 선택 창 -->
-                        <form onsubmit="searchPlaces(); return false;">
+                        <form onchange="searchPlaces(); return false;">
                             <select name="cafe" id="cafe_selecter">
                                 <option value="마포구 카페" selected>마포구 카페</option>
                                 <option value="합정 디벙크">디벙크</option>
@@ -384,7 +384,6 @@
                                 <option value="프릳츠 공덕">프릳츠</option>
                                 <option value="카페 꼼마 합정">카페꼼마</option>
                             </select>
-                            <button type="submit">선택하기</button>
                         </form>
                     </div>
                 </div>

@@ -57,6 +57,9 @@ footer{
 
 .footer_logo_box {
     margin-right: 20px;
+    color: var(--letter-color);
+    font-size: 15px;
+    letter-spacing: -0.2px;
 }
 
 .footer_logo_box a{

@@ -113,11 +113,10 @@ let onOff = true;
 handleTheme();
 DarkModeBtn.addEventListener('click', handleTheme);
 
-
 // boolean을 이용하여 변경하는 함수
 function handleTheme(){
     onOff = !onOff;
-    if( onOff == true ){
+    if( onOff ){
         document.documentElement.setAttribute('color-theme', 'dark');
         DarkModeContainer.classList.add("slider_darkMode");
         DarkModeImg.classList.add("dark_img");

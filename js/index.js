@@ -85,9 +85,9 @@ function findHashtag(hash, item){
  * 화면 고정 네비게이션
  */
 
-const superNav = document.getElementById("super_nav");
-const superNavBar = document.querySelector(".super_nav_panel");
-const superNavRoot = document.querySelector(".super_nav_root");
+const superNav = document.getElementById("super_nav"); //슈퍼 네비게이션
+const superNavBar = document.querySelector(".super_nav_panel"); // 슈퍼 네비게이션 하위 요소
+const superNavRoot = document.querySelector(".super_nav_root"); // 슈퍼 네비게이션 고정 루트
 
 superNav.addEventListener("mouseover", showSuperNav);
 superNav.addEventListener("mouseout", hideSuperNav);

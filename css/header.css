@@ -16,6 +16,7 @@ header {
     sans-serif;
     height: 800px;
     overflow: hidden;
+    user-select: none;
 }
 
 /* 로고, 내비 버튼 */
@@ -248,20 +249,19 @@ header {
     color: var(--block-color);
     font-weight: bold;
     font-size: 25px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    transition: 0.5s;
+    border-radius: 25%;
     z-index: 5;
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 25%;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--text-color);
 }
 
 /* 슬라이드 점 버튼 */

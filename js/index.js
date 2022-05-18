@@ -40,13 +40,13 @@ function showSlides(n) {
 
 
 // 글자 박스, 글자 배열
-const LetterArr =["시원한 커피 한잔의 여유", "음악은 흐르고 커피물은 끓는다.", "행복은 한잔의 커피에서도 문득 찾아옵니다."];
+const letterArr =["시원한 커피 한잔의 여유", "음악은 흐르고 커피물은 끓는다.", "행복은 한잔의 커피에서도 문득 찾아옵니다."];
 const letterBox = document.getElementById("nice_letter");
 
 // 랜덤 하게 숫자 생성후 래터박스 배열에 담아 함수 호출
 function makeNiceLetter(){
-    let random = Math.floor(Math.random()*LetterArr.length);
-    letterBox.innerHTML = LetterArr[random];
+    let random = Math.floor(Math.random()*letterArr.length);
+    letterBox.innerHTML = letterArr[random];
 }
 
 makeNiceLetter();
@@ -78,23 +78,23 @@ function findHashtag(hash, item){
 // 화면 고정 네비게이션
 // 
 
-const SuperNav = document.getElementById("super_nav");
-const SuperNavBar = document.querySelector(".super_nav_panel");
-const SuperNavRoot = document.querySelector(".super_nav_root");
+const superNav = document.getElementById("super_nav");
+const superNavBar = document.querySelector(".super_nav_panel");
+const superNavRoot = document.querySelector(".super_nav_root");
 
-SuperNav.addEventListener("mouseover", showSuperNav)
-SuperNav.addEventListener("mouseout", hideSuperNav)
+superNav.addEventListener("mouseover", showSuperNav);
+superNav.addEventListener("mouseout", hideSuperNav);
 
 // 네비게이션을 보여주는 함수
 function showSuperNav(){
-    SuperNavBar.style.display = "block"
-    SuperNavRoot.style.border = "5px solid var(--root-color)"
+    superNavBar.style.display = "block";
+    superNavRoot.style.border = "5px solid var(--root-color)";
 }
 
 // 네비게이션을 감춰주는 함수
 function hideSuperNav(){
-    SuperNavBar.style.display = "none"
-    SuperNavRoot.style.border = "1px solid var(--root-color)"
+    superNavBar.style.display = "none";
+    superNavRoot.style.border = "1px solid var(--root-color)";
 }
 
 //
@@ -102,42 +102,42 @@ function hideSuperNav(){
 //
 
 // 다크모드 요소
-const DarkModeBtn = document.querySelector(".dark_nav");
-const DarkModeContainer = document.querySelector(".slider_Container");
-const DarkModeImg = document.querySelector(".event");
+const darkModeBtn = document.querySelector(".dark_nav");
+const darkModeContainer = document.querySelector(".slider_Container");
+const darkModeImg = document.querySelector(".event");
 const logoMark = document.querySelector(".log_box img");
 const logoMarkContainer = document.querySelector(".log_box");
-const AllMedal = document.querySelectorAll(".safe_icon");
+const allMedal = document.querySelectorAll(".safe_icon");
 
 let onOff = true;
 handleTheme();
-DarkModeBtn.addEventListener('click', handleTheme);
+darkModeBtn.addEventListener('click', handleTheme);
 
 // boolean을 이용하여 변경하는 함수
 function handleTheme(){
     onOff = !onOff;
     if( onOff ){
         document.documentElement.setAttribute('color-theme', 'dark');
-        DarkModeContainer.classList.add("slider_darkMode");
-        DarkModeImg.classList.add("dark_img");
+        darkModeContainer.classList.add("slider_darkMode");
+        darkModeImg.classList.add("dark_img");
         logoMark.src = "./img/coffee_medal2.png";
         logoMarkContainer.classList.add("log_rotate");
 
-        for (let i = 0; i < AllMedal.length; i++) {
-            AllMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
-            AllMedal[i].classList.add("log_rotate");
+        for (let i = 0; i < allMedal.length; i++) {
+            allMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
+            allMedal[i].classList.add("log_rotate");
         }
     }
     else {
         document.documentElement.setAttribute('color-theme', 'light');
-        DarkModeContainer.classList.remove("slider_darkMode");
-        DarkModeImg.classList.remove("dark_img");
+        darkModeContainer.classList.remove("slider_darkMode");
+        darkModeImg.classList.remove("dark_img");
         logoMark.src = "./img/coffee_medal.png";
         logoMarkContainer.classList.remove("log_rotate");
         
-        for (let i = 0; i < AllMedal.length; i++) {
-            AllMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
-            AllMedal[i].classList.remove("log_rotate");
+        for (let i = 0; i < allMedal.length; i++) {
+            allMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
+            allMedal[i].classList.remove("log_rotate");
         }
     }
 }

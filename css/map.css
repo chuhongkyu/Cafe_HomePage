@@ -100,6 +100,8 @@
 
 #menu_wrap .option button {
     margin-left: 5px;
+    white-space: nowrap;
+    
 }
 
 /* 스크롤바 디자인 */

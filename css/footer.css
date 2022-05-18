@@ -57,11 +57,15 @@ footer{
 
 .footer_logo_box {
     margin-right: 20px;
+}
+
+.footer_logo_box a{
     cursor: pointer;
 }
 
 .footer_logo_box h5{
     color: var(--text-color2);
+    user-select: none;
 }
 
 .footer_mark img:hover{

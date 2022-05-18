@@ -1,6 +1,15 @@
-//
-// 슬라이드 박스
-//
+/**
+ * 테마, 좋은글 만들기 함수 onload
+ */
+
+window.onload = function(){
+    handleTheme();
+    makeNiceLetter();
+}
+
+/**
+ * 슬라이드 박스
+ */
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -34,10 +43,9 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-//
-// 랜덤 레터박스
-//
-
+/**
+ * 랜덤 레터박스
+ */
 
 // 글자 박스, 글자 배열
 const letterArr =["시원한 커피 한잔의 여유", "음악은 흐르고 커피물은 끓는다.", "행복은 한잔의 커피에서도 문득 찾아옵니다."];
@@ -48,8 +56,6 @@ function makeNiceLetter(){
     let random = Math.floor(Math.random()*letterArr.length);
     letterBox.innerHTML = letterArr[random];
 }
-
-makeNiceLetter();
 
 
 // 버튼 클릭시 리스트 안에서 특정 해쉬태그(class)를 찾는 함수
@@ -74,9 +80,10 @@ function findHashtag(hash, item){
     item.classList.add("hashtag_click");
 }
 
-// 
-// 화면 고정 네비게이션
-// 
+
+/**
+ * 화면 고정 네비게이션
+ */
 
 const superNav = document.getElementById("super_nav");
 const superNavBar = document.querySelector(".super_nav_panel");
@@ -97,23 +104,21 @@ function hideSuperNav(){
     superNavRoot.style.border = "1px solid var(--root-color)";
 }
 
-//
-// 다크모드
-//
+/**
+ * 다크모드
+ */
 
-// 다크모드 요소
-const darkModeBtn = document.querySelector(".dark_nav");
-const darkModeContainer = document.querySelector(".slider_Container");
-const darkModeImg = document.querySelector(".event");
-const logoMark = document.querySelector(".log_box img");
-const logoMarkContainer = document.querySelector(".log_box");
-const allMedal = document.querySelectorAll(".safe_icon");
+const darkModeBtn = document.querySelector(".dark_nav"); //다크모드 버튼
+const darkModeContainer = document.querySelector(".slider_Container"); //다크모드시 슬라이드 컨테이너
+const darkModeImg = document.querySelector(".event"); //다크모드시 사라지는 이미지
+const logoMark = document.querySelector(".log_box img"); // 다크모드시 바뀌는 로고 이미지
+const logoMarkContainer = document.querySelector(".log_box"); // 다크모드시 회전하는 로고 박스
+const allMedal = document.querySelectorAll(".safe_icon"); // 다크모드시 바뀌는 로고 이미지2
 
 let onOff = true;
-handleTheme();
 darkModeBtn.addEventListener('click', handleTheme);
 
-// boolean을 이용하여 변경하는 함수
+// 변수를 이용한 다크모드 제어 함수
 function handleTheme(){
     onOff = !onOff;
     if( onOff ){
@@ -122,7 +127,7 @@ function handleTheme(){
         darkModeImg.classList.add("dark_img");
         logoMark.src = "./img/coffee_medal2.png";
         logoMarkContainer.classList.add("log_rotate");
-
+        //모든 메달 Icon을 반복문을 통해 바꾸고 Rotate클래스를 추가.
         for (let i = 0; i < allMedal.length; i++) {
             allMedal[i].style.backgroundImage = "url(./img/coffee_medal2.png)";
             allMedal[i].classList.add("log_rotate");
@@ -134,7 +139,7 @@ function handleTheme(){
         darkModeImg.classList.remove("dark_img");
         logoMark.src = "./img/coffee_medal.png";
         logoMarkContainer.classList.remove("log_rotate");
-        
+        //모든 메달 Icon을 반복문을 통해 바꾸고 Rotate클래스를 제거.
         for (let i = 0; i < allMedal.length; i++) {
             allMedal[i].style.backgroundImage = "url(./img/coffee_medal.png)";
             allMedal[i].classList.remove("log_rotate");

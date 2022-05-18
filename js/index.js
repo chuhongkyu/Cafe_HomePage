@@ -119,10 +119,10 @@ const allMedal = document.querySelectorAll(".safe_icon"); // 다크모드시 바
 darkModeBtn.addEventListener('click', handleTheme);
 
 // 변수를 이용한 다크모드 제어 함수
-async function handleTheme(){
+function handleTheme(){
     onOff = !onOff;
     if( onOff ){
-        document.documentElement.setAttribute('color-theme', 'dark');
+        document.documentElement.className = 'dark';
         darkModeContainer.classList.add("slider_darkMode");
         darkModeImg.classList.add("dark_img");
         logoMark.src = "./img/coffee_medal2.png";
@@ -134,7 +134,7 @@ async function handleTheme(){
         }
     }
     else {
-        document.documentElement.setAttribute('color-theme', 'light');
+        document.documentElement.className = 'light';
         darkModeContainer.classList.remove("slider_darkMode");
         darkModeImg.classList.remove("dark_img");
         logoMark.src = "./img/coffee_medal.png";

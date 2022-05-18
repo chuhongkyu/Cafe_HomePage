@@ -26,7 +26,8 @@ a{
 }
 
 /* 디자인 색깔 */
-:root[color-theme='light'] {
+:root,
+:root.light {
     --text-color: black;
     --bg-color: white;
     --root-color: #fcf4e3;
@@ -39,7 +40,7 @@ a{
     --content-color: white;
 }
 
-:root[color-theme='dark'] {
+:root.dark {
     --text-color: #d9d9d9;
     --bg-color: #121212;
     --root-color: #292929;

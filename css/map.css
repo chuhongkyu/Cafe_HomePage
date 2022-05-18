@@ -85,7 +85,6 @@
     width: 40vw;
     height: 100%;
     background: var(--bg-color);
-    z-index: 1;
     font-size: 12px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;

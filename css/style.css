@@ -158,6 +158,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .super_nav_root .wave {
@@ -190,7 +191,7 @@ a{
     right: 0px;
     width: 100px;
     height: 100px;
-    z-index: 5px;
+    z-index: 5;
     transition: 0.5s;
 }
 

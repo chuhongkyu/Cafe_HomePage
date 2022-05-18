@@ -2,8 +2,9 @@
  * 테마, 좋은글 만들기 함수 onload
  */
 
+//다크모드 onOFF 변수
 let onOff = true;
-
+// 테마와 랜덤을 정해주는 함수를 먼저 호출
 window.onload= function(){
     makeNiceLetter();
     handleTheme();

@@ -201,6 +201,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-template-rows: auto;
+    user-select: none;
 }
 
 .hashtag_content_btn {
@@ -233,6 +234,7 @@
     color: var(--text-color);
     font-size: 15px;
     z-index: 1;
+    user-select: none;
 }
 
 .go_homePage:hover{

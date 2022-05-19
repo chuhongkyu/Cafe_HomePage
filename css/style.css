@@ -53,6 +53,22 @@ a{
     --content-color: #888888;
 }
 
+/* 
+*selection
+*/
+::-moz-selection {
+    background: var(--block-color);
+    color: var(--bg-color);
+}
+
+::selection {
+    background: var(--block-color);;
+    color: var(--bg-color);
+}
+
+
+
+
 /*
 오프닝
 */

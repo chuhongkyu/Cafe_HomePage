@@ -183,6 +183,46 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.vapor{
+    width: 240px;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    bottom: 70px;
+}
+
+.vapor span{
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    animation: vapor 3s infinite;
+    filter: blur(8px);
+    animation-delay: calc(var(--i)*-0.5s);
+}
+
+@keyframes vapor {
+    0%{
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+    }
+    15%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.8;
+        transform: translateY(-150px) scaleX(5);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-190px) scaleX(13);
+    }
+    
+}
 
 /* 세번째 슬라이드 */
 .slide_Cup {

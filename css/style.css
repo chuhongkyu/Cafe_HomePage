@@ -62,7 +62,7 @@ a{
 }
 
 ::selection {
-    background: var(--block-color);;
+    background: var(--block-color);
     color: var(--bg-color);
 }
 

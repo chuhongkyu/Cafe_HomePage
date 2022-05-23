@@ -178,7 +178,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* 수증기 */
 .vapor {
   width: 240px;
   height: 100px;

@@ -55,7 +55,6 @@ header {
 }
 
 .log_container nav a {
-  text-decoration: none;
   margin: 15px;
   padding: 5px;
   font-size: 20px;
@@ -65,7 +64,7 @@ header {
 
 .log_container nav a:hover {
   transition: 0.5s;
-  color: var(--text-color);
+  color: var(--text-color2);
 }
 
 /* 회전하는 텍스트 */

@@ -4,304 +4,303 @@
 */
 
 .map_container {
-    width: 100%;
-    height: 100%;
-    background: url(../img/map_container.png) fixed;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: url(../img/map_container.png) fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .map_container h1 {
-    font-size: 55px;
-    color: white;
-    margin-bottom: 10px;
+  font-size: 55px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 /* 지도 맵 */
 .map_wrap,
 .map_wrap * {
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
 }
 
 .map_wrap a,
 .map_wrap a:hover,
 .map_wrap a:active {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .map_wrap {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 지도 확대,축소 버튼 */
 .map_expand_btns {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    bottom: 10px;
-    right: 10px;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 10px;
+  right: 10px;
 }
 
 .map_expand_btns span {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: var(--root-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-weight: 800;
-    color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--root-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 800;
+  color: var(--text-color);
 }
 
 .map_expand_btns span:hover {
-    background-color: var(--block-color);
-    transition: 0.5s;
+  background-color: var(--block-color);
+  transition: 0.5s;
 }
 
 /* 카페 메뉴 선책창*/
 #menu_wrap {
-    padding: 10px;
-    overflow-y: auto;
-    width: 40vw;
-    height: 100%;
-    background: var(--bg-color);
-    font-size: 12px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+  padding: 10px;
+  overflow-y: auto;
+  width: 40vw;
+  height: 100%;
+  background: var(--bg-color);
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 #menu_wrap .option {
-    text-align: center;
+  text-align: center;
 }
 
 #menu_wrap .option p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 #menu_wrap .option button {
-    margin-left: 5px;
-    white-space: nowrap;
-    
+  margin-left: 5px;
+  white-space: nowrap;
 }
 
 /* 스크롤바 디자인 */
 #menu_wrap::-webkit-scrollbar {
-    width: 20px;
+  width: 20px;
 }
 
 #menu_wrap::-webkit-scrollbar-thumb {
-    background-color: var(--text-color2);
+  background-color: var(--text-color2);
 }
 
 #menu_wrap::-webkit-scrollbar-track {
-    background-color: var(--root-color);
-    padding: 0px 2px;
+  background-color: var(--root-color);
+  padding: 0px 2px;
 }
 
 #placesList li {
-    list-style: none;
+  list-style: none;
 }
 
 #placesList .item {
-    position: relative;
-    border-bottom: 1px solid #888;
-    overflow: hidden;
-    cursor: pointer;
-    min-height: 65px;
+  position: relative;
+  border-bottom: 1px solid #888;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 65px;
 }
 
 #placesList .item span {
-    display: block;
-    margin-top: 4px;
+  display: block;
+  margin-top: 4px;
 }
 
 #placesList .item h5,
 #placesList .item .info {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #placesList .item .info {
-    padding: 10px 0 10px 55px;
-    color: var(--text-color);
+  padding: 10px 0 10px 55px;
+  color: var(--text-color);
 }
 
 #placesList .info .gray {
-    color: var(--text-color2);
+  color: var(--text-color2);
 }
 
 #placesList .info .jibun {
-    padding-left: 26px;
-    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+  padding-left: 26px;
+  background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png)
+    no-repeat;
 }
 
 #placesList .info .tel {
-    color: var(--text-color2);
+  color: var(--text-color2);
 }
 
 #placesList .item .markerBg {
-    float: left;
-    position: absolute;
-    width: 36px;
-    height: 37px;
-    margin: 10px 0 0 10px;
-    background: url(../img/coffee_mark.png) no-repeat;
+  float: left;
+  position: absolute;
+  width: 36px;
+  height: 37px;
+  margin: 10px 0 0 10px;
+  background: url(../img/coffee_mark.png) no-repeat;
 }
 
 #placesList .item .marker_1 {
-    background-position: 0 -10px;
+  background-position: 0 -10px;
 }
 
 #placesList .item .marker_2 {
-    background-position: 0 -56px;
+  background-position: 0 -56px;
 }
 
 #placesList .item .marker_3 {
-    background-position: 0 -102px
+  background-position: 0 -102px;
 }
 
 #placesList .item .marker_4 {
-    background-position: 0 -148px;
+  background-position: 0 -148px;
 }
 
 #placesList .item .marker_5 {
-    background-position: 0 -194px;
+  background-position: 0 -194px;
 }
 
 #placesList .item .marker_6 {
-    background-position: 0 -240px;
+  background-position: 0 -240px;
 }
 
 #placesList .item .marker_7 {
-    background-position: 0 -286px;
+  background-position: 0 -286px;
 }
 
 #placesList .item .marker_8 {
-    background-position: 0 -332px;
+  background-position: 0 -332px;
 }
 
 #placesList .item .marker_9 {
-    background-position: 0 -378px;
+  background-position: 0 -378px;
 }
 
 #placesList .item .marker_10 {
-    background-position: 0 -423px;
+  background-position: 0 -423px;
 }
 
 #placesList .item .marker_11 {
-    background-position: 0 -470px;
+  background-position: 0 -470px;
 }
 
 #placesList .item .marker_12 {
-    background-position: 0 -516px;
+  background-position: 0 -516px;
 }
 
 #placesList .item .marker_13 {
-    background-position: 0 -562px;
+  background-position: 0 -562px;
 }
 
 #placesList .item .marker_14 {
-    background-position: 0 -608px;
+  background-position: 0 -608px;
 }
 
 #placesList .item .marker_15 {
-    background-position: 0 -654px;
+  background-position: 0 -654px;
 }
 
 /* 페이지 숫자*/
 #pagination {
-    margin: 10px auto;
-    text-align: center;
+  margin: 10px auto;
+  text-align: center;
 }
 
 #pagination a {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 #pagination .on {
-    font-weight: bold;
-    cursor: default;
-    color: #777;
+  font-weight: bold;
+  cursor: default;
+  color: #777;
 }
 
 /* 카페 선택창 */
-#cafe_selecter{
-    width: 80%;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--text-color2);
-    color: var(--bg-color);
-    border: none;
+#cafe_selecter {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--text-color2);
+  color: var(--bg-color);
+  border: none;
 }
 
-.option{
-    width: 100%;
+.option {
+  width: 100%;
 }
 
-.option form{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 1px solid black;
-    padding: 0px 5px 5px 5px;
+.option form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 0px 5px 5px 5px;
 }
 
-.content_style{
-    padding: 5px 10px;
+.content_style {
+  padding: 5px 10px;
 }
-
 
 /* 미디어 쿼리 */
 @media all and (max-width: 768px) {
-    .map_wrap {
-        width: 100%;
-        height: 70%;
-        flex-direction: column;
-    }
-    #menu_wrap{
-        width: 100%;
-        height: 90%;
-    }
-    .map_container{
-        background: var(--bean-color);
-    }
-    .map_expand_btns span{
-        width: 25px;
-        height: 25px;
-    }
+  .map_wrap {
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+  }
+  #menu_wrap {
+    width: 100%;
+    height: 90%;
+  }
+  .map_container {
+    background: var(--bean-color);
+  }
+  .map_expand_btns span {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .map_wrap {
-        width: 90%;
-        height: 80%;
-        flex-direction: column;
-    }
-    #menu_wrap {
-        width: 100%;
-         height: 90%;
-    }
+  .map_wrap {
+    width: 90%;
+    height: 80%;
+    flex-direction: column;
+  }
+  #menu_wrap {
+    width: 100%;
+    height: 90%;
+  }
 }

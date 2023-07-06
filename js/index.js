@@ -112,6 +112,16 @@ function hideSuperNav() {
  * 다크모드
  */
 
+if (window.matchMedia) {
+  const query = window.matchMedia('(prefers-color-scheme: dark)');
+  console.log(query.matches)
+  if(query.matches){
+    handleTheme()
+  }else{
+    
+  }
+}
+
 const darkModeBtn = document.querySelector(".dark_nav"); //다크모드 버튼
 const darkModeContainer = document.querySelector(".slider_Container"); //다크모드시 슬라이드 컨테이너
 const darkModeImg = document.querySelector(".event"); //다크모드시 사라지는 이미지

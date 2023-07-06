@@ -26,6 +26,36 @@ a {
   color: inherit;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #d9d9d9;
+    --bg-color: #121212;
+    --root-color: #292929;
+    --block-color: rgb(116, 115, 115);
+    --bean-color: white;
+    --text-color2: white;
+    --cloud-color: white;
+    --letter-color: white;
+    --super-nav: rgb(73, 73, 73);
+    --content-color: #888888;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: black;
+    --bg-color: white;
+    --root-color: #fcf4e3;
+    --block-color: #dec28c;
+    --bean-color: #7b554a;
+    --text-color2: #dec28c;
+    --cloud-color: #7b554a;
+    --letter-color: #888;
+    --super-nav: rgb(104, 103, 103);
+    --content-color: white;
+  }
+}
+
 /* 디자인 색깔 */
 :root,
 :root.light {
